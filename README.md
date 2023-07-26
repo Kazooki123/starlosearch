@@ -42,7 +42,11 @@ We welcome contributions from the community! If you'd like to contribute to Star
 StarloSearch is licensed under the MIT License. See LICENSE for more information.
 
 #### Contact
-If you have any questions, feedback, or suggestions, feel free to reach out to us at support@starlosearch.com or open an issue on our GitHub repository.
+If you have any questions, feedback, or suggestions, feel free to reach out to us at mgamerdinge146@gmail.com or open an issue on our GitHub repository.
+### For Additional Contacts
+Discord: starloexoliz
+Emails: mgamerdinge146@gmail.com, markanthonygelito@gmail.com
+Twitter: @Mr_Unknown157
 
 #### Acknowledgments
 Special thanks to all the contributors and developers who have helped make StarloSearch a reality.
