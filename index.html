@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>StarloSearch</title>
+  <link rel="icon" type="image/png" href="furrygirl.jpg">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/discordbot.css">
+</head>
+<body>
+
+  <!-- This is the container where the content of search-result.html will be loaded -->
+ <div id="mainContent">
+  <!-- Your default content goes here -->
+  <h1>Welcome to My Search Engine</h1>
+  <p>Click the button to go to the search result page.</p>
+ </div>
+
+ <!-- Add a button to navigate to the search-result.html page -->
+ <button onclick="loadSearchResultPage()">Go to Search Result</button>
+
+  <!-- Discord Bot Button -->
+  <div id="discordBotButton" onclick="openElixe()">
+    <img src="images/Hanako.jfif" alt="Elixe" />
+  </div>
+
+  <!-- Discord Bot Message Box -->
+  <div id="discordMessageBox" style="display: none;">
+    <p>Hello! Please type "/help" for help.</p>
+  </div>
+
+  <!-- Navigation -->
+  <div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">Search</a>
+    <a href="#" onclick="showSearchHistory()">History</a>
+  </div>
+
+  <!-- Search Bar -->
+  <div id="searchBar">
+    <div class="autocomplete">
+      <input type="text" id="searchInput" placeholder="Enter your search query">
+      <div id="autocompleteItems" class="autocomplete-items"></div>
+    </div>
+    <button onclick="search()">Search</button>
+  </div>
+
+  <!-- In your HTML file -->
+  <div id="loginBox">
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <button onclick="register()">Register</button>
+  </div>
+
+  <!-- Search Results -->
+  <div id="searchResults"></div>
+
+  <!-- Video Container -->
+  <div class="video-container">
+    <div id="videoPlayer"></div>
+  </div>
+
+  <!-- Chatbot Button -->
+  <button id="chatbotButton" onclick="openChatbot()">Chatbot</button>
+
+  <!-- Chatbot Area -->
+  <div id="chatbotContainer" style="display: none;">
+    <div id="chatbotHeader">
+      <h2>Chatbot</h2>
+      <button onclick="closeChatbot()">Close</button>
+  </div>
+  <div id="chatbox">
+    <div id="chatbotMessages"></div>
+     <div id="userInput">
+       <input type="text" id="userMessage" placeholder="Type your message here">
+       <button onclick="sendMessage()">Send</button>
+     </div>
+   </div>
+ </div>
+
+ <!-- MIC BUTTON -->
+ <div class="mic-icon" onclick="startVoiceSearch()"></div>
+
+
+  <!-- Search History -->
+  <div id="searchHistory">
+    <h2>Search History</h2>
+    <ul id="historyList">
+      <!-- Search history items will be dynamically added here -->
+    </ul>
+  </div>
+
+  <!-- JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-webgl"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+  <script src="Javascript/script.js"></script>
+  <script src="Javascript/discordbot.js"></script>
+  <script src="Javascript/searchhistory.js"></script>
+  <script src="Javascript/speak.js"></script>
+  <script src="Javascript/login.js"></script>
+  <script src="Javascript/chatbot.js"></script>
+  <script src="Javascript/autocomplete.js"></script>
+  <script src="Javascript/elixe.js"></script>
+  <script src="Javascript/searchresult.js"></script>
+  <script src="Javascript/redis.js"></script>
+  <script>
+  var autocompleteData = [
+    "apple",
+    "banana",
+    "orange",
+    "grapes",
+    // Add more autocomplete suggestions here
+  ];
+
+  autocomplete(document.getElementById("searchInput"), autocompleteData);
+  </script>
+  <script>
+    // Function to handle opening the chatbot area
+    function openChatbot() {
+      const chatbotContainer = document.getElementById('chatbotContainer');
+      const chatInput = document.getElementById('chatInput');
+      const chatLog = document.getElementById('chatLog');
+
+      // Show the chatbot container
+      chatbotContainer.style.display = 'block';
+
+      // Focus on the chat input box
+      chatInput.focus();
+
+      // Listen for user input and display chatbot responses
+      chatInput.addEventListener('keydown', async (event) => {
+        if (event.key === 'Enter') {
+          event.preventDefault();
+          const userMessage = chatInput.value.trim();
+          chatInput.value = '';
+
+          // Display user message in the chat log
+        const userMessageDiv = document.createElement('div');
+        userMessageDiv.textContent = 'You: ' + userMessage;
+        chatLog.appendChild(userMessageDiv);
+
+        // Get the chatbot response
+        const botResponse = await chatbotResponse(userMessage);
+
+        // Display chatbot response in the chat log
+        const botResponseDiv = document.createElement('div');
+        botResponseDiv.textContent = 'Chatbot: ' + botResponse;
+        chatLog.appendChild(botResponseDiv);
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
