@@ -1,0 +1,320 @@
+/* Add your CSS styles here */
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('assets/fonts/Roboto-Regular.ttf') format('truetype');
+  /* Add more font weights and styles as needed */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navigation */
+  .navbar {
+    background-color: #000;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+  
+  /* Main Content */
+  .video-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .video {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Search Bar */
+  #searchBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  #searchInput {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 300px;
+    margin-right: 10px;
+  }
+  
+  #searchButton {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  /* Search Results */
+  #searchResults {
+    margin-top: 20px;
+  }
+  
+  .searchResult {
+    margin-bottom: 10px;
+  }
+  
+  .searchResult h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .searchResult p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  .imageResult {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .imageResult img {
+    margin-right: 10px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  
+  .imageResult a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+  }
+  
+  .videoResult {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .videoResult img {
+    margin-right: 10px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  
+  .videoResult a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+  }
+  
+  /* Autocomplete */
+  .autocomplete {
+    position: relative;
+    display: inline-block;
+    width: 300px;
+  }
+  
+  .autocomplete-items {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 99;
+  }
+  
+  .autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .autocomplete-items div:hover {
+    background-color: #e9e9e9;
+  }
+  
+  .autocomplete-active {
+    background-color: #4CAF50 !important;
+    color: #fff;
+  }
+  
+  /* Chatbot Button */
+  #chatbotButton {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+  }
+  
+  /* Chatbot Area */
+#chatbotContainer {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#chatbotHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#chatbotHeader h2 {
+  margin: 0;
+}
+
+#chatbotHeader button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#chatbox {
+  margin-top: 10px;
+}
+
+#chatbotMessages {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.userMessage,
+.chatbotResponse {
+  margin: 5px 0;
+}
+
+/* Message Input Box */
+#userInput {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#userMessage {
+  flex: 1;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#userMessage:focus {
+  outline: none;
+}
+
+#userInput button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+/* Add these CSS styles in your style.css file */
+.mic-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+.mic-icon:before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 18px solid white;
+}
+
+.mic-icon:after {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+/* Login Box */
+.login-box {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.login-box h2 {
+  margin: 0;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
