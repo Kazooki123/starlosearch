@@ -1,0 +1,39 @@
+/* discordbot.css */
+
+/* Elixe Button Styles */
+#discordBotButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #7289da;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #discordBotButton img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* Discord Message Box Styles */
+  #discordMessageBox {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    background-color: #7289da;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+  }
+  
+  /* Add more styles as needed */
+  
+  
