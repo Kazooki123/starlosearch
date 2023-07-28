@@ -84,7 +84,8 @@ function search() {
     var searchQuery = document.getElementById('searchInput').value;
   
     // Make a GET request to the Google Search API
-    fetch(`https://www.googleapis.com/customsearch/v1?key=AIzaSyBkc8B7LNvNoJPv6LOVveEE2T_zpSvG_uQ&cx=03d9c25b28b784a57&q=${searchQuery}`)
+   // Replace "YOUR_API_KEY" to your actual Google Search API key
+    fetch(`https://www.googleapis.com/customsearch/v1?key=YOUR_API_KEY&cx=03d9c25b28b784a57&q=${searchQuery}`)
       .then(response => response.json())
       .then(data => {
         // Process the API response and display the search results
