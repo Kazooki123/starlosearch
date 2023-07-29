@@ -1,8 +1,9 @@
+// Note that use your own OpenAI API KEY to work this code.
 // Function to process user's message and get chatbot's response
 async function processUserMessage(message) {
   try {
     // Replace 'YOUR_API_KEY' with your actual OpenAI API key
-    const apiKey = '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';
+    const apiKey = 'YOUR_API_KEY';
 
     // Set up the headers for the API request
     const headers = {
