@@ -117,4 +117,11 @@ Emails: mgamerdinge146@gmail.com, markanthonygelito@gmail.com
 Twitter: @Mr_Unknown157
 
 # Acknowledgments
-Special thanks to all the contributors and developers who have helped make StarloSearch a reality.
+Special thanks to StarloExoliz, The developer of this project
+### Inspired by:
+
+-Google
+-Microsoft
+-OpenAI
+
+Also this project was done by researching, help by Chat-GPT, and tutorials from Youtube!
