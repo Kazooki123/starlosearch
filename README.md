@@ -5,6 +5,11 @@
 # Overview
 StarloSearch is a modern and efficient search engine designed to provide users with quick and accurate search results. Whether you're searching for websites, images, or videos, StarloSearch has got you covered. With its intuitive user interface and advanced search algorithms, finding the information you need has never been easier.
 
+# Before We Start
+### Note: 
+
+StarloSearch is on Development meaning new features or machine learning will come. Algorithm, Sorting, Query systems are still on development, If you wanna help please contact mgamerdinge@gmail.com for information. I would appreciate if you want to help this project! 
+
 # Features
 Fast and Responsive: StarloSearch is built for speed, delivering search results in the blink of an eye.
 
