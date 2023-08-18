@@ -1,6 +1,16 @@
 {
   "dependencies": {
+    "@algolia/autocomplete-js": "^1.11.0",
+    "@google-cloud/vision": "^4.0.1",
+    "@tensorflow/tfjs": "^4.10.0",
+    "algoliasearch": "^4.19.1",
+    "css.gg": "^2.1.1",
     "ioredis": "^5.3.2",
-    "pg": "^8.11.1"
+    "pg": "^8.11.1",
+    "util": "^0.12.5"
+  },
+  "devDependencies": {
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
   }
 }
