@@ -1,7 +1,9 @@
 const { Client } = require("discord.js");
 const client = new discordJs.Client();
 
-const TOKEN = 'MTEzMjIzNTEyMjg2Mzc2NzYyMw.G330_L.SxtQ9pEjaxBB7eYxmGldfY7JqA50nTDlL6H0jw';
+// Replace it with your Discord bot token
+// To get it simple go to Discord's developer portal and make a bot.
+const TOKEN = 'YOUR DISCORD TOKEN';
 
 client.once('ready', () => {
   console.log('Elixe is online!');
