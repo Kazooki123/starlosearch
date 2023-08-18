@@ -1,158 +1,240 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>StarloSearch</title>
-  <link rel="icon" type="image/png" href="furrygirl.jpg">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/discordbot.css">
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>StarloSearch</title>
+    <link rel="icon" type="image/png" href="Images/furrygirl.jpg" />
+    <link rel="stylesheet" href="Assets/css/style.css" />
+    <link rel="stylesheet" href="Assets/css/discordbot.css" />
+    <link rel="stylesheet" href="Assets/css/navbar.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <input type="checkbox" id="menu" hidden />
+        <label for="menu">
+          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-xmark"></i>
+        </label>
+        <div class="logo">
+          <h1>StarloSearch</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Search</a></li>
+            <li><a href="#" onclick="showSearchHistory()">History</a></li>
+          </ul>
+        </nav>
+      </div>
 
-  <!-- This is the container where the content of search-result.html will be loaded -->
- <div id="mainContent">
-  <!-- Your default content goes here -->
-  <h1>Welcome to My Search Engine</h1>
-  <p>Click the button to go to the search result page.</p>
- </div>
+      <!-- This is the container where the content of search-result.html will be loaded -->
+      <div id="mainContent">
+        <!-- Your default content goes here -->
+        <h1>Welcome to My Search Engine</h1>
+        <p>Click the Search button to go to the search result page.</p>
+      </div>
 
- <!-- Add a button to navigate to the search-result.html page -->
- <button onclick="loadSearchResultPage()">Go to Search Result</button>
+      <!-- Add a button to navigate to the search-result.html page -->
+      <!-- <button onclick="loadSearchResultPage()">Go to Search Result</button> -->
 
-  <!-- Discord Bot Button -->
-  <div id="discordBotButton" onclick="openElixe()">
-    <img src="images/Hanako.jfif" alt="Elixe" />
-  </div>
+      <!-- Discord Bot Button -->
+      <div id="discordBotButton" onclick="openElixe()">
+        <img src="Images/Hanako.jfif" alt="Elixe" />
+      </div>
 
-  <!-- Discord Bot Message Box -->
-  <div id="discordMessageBox" style="display: none;">
-    <p>Hello! Please type "/help" for help.</p>
-  </div>
+      <!-- Discord Bot Message Box -->
+      <div id="discordMessageBox" style="display: none">
+        <p>Hello! Please type "/help" for help.</p>
+        <input
+          type="text"
+          id="discordMessageInput"
+          placeholder="Type your message..."
+        />
+        <button id="discordSendButton">Send</button>
+      </div>
 
-  <!-- Navigation -->
-  <div class="navbar">
-    <a href="#">Home</a>
-    <a href="#">Search</a>
-    <a href="#" onclick="showSearchHistory()">History</a>
-  </div>
+      <!-- Search Bar -->
+      <div id="searchBar">
+        <div class="autocomplete">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Enter your search query"
+          />
+          <div id="autocompleteItems" class="autocomplete-items"></div>
+        </div>
+        <button onclick="search()">Search</button>
+        <button onclick="viewImages()">View Images</button>
+        <button onclick="viewVideos()">View Videos</button>
+      </div>
 
-  <!-- Search Bar -->
-  <div id="searchBar">
-    <div class="autocomplete">
-      <input type="text" id="searchInput" placeholder="Enter your search query">
-      <div id="autocompleteItems" class="autocomplete-items"></div>
-    </div>
-    <button onclick="search()">Search</button>
-  </div>
+      <!-- Search Results -->
+      <div id="searchResults"></div>
 
-  <!-- In your HTML file -->
-  <div id="loginBox">
-    <input type="text" id="username" placeholder="Username">
-    <input type="password" id="password" placeholder="Password">
-    <button onclick="login()">Login</button>
-    <button onclick="register()">Register</button>
-  </div>
+      <!-- Video Container -->
+      <div class="video-container">
+        <div id="videoPlayer"></div>
+      </div>
 
-  <!-- Search Results -->
-  <div id="searchResults"></div>
+      <!-- Chatbot Button -->
+      <button id="chatbotButton" onclick="openChatbot()">Chatbot</button>
 
-  <!-- Video Container -->
-  <div class="video-container">
-    <div id="videoPlayer"></div>
-  </div>
+      <!-- Chatbot Area -->
+      <div id="chatbotContainer" style="display: none">
+        <div id="chatbotHeader">
+          <h2>Chatbot</h2>
+          <button onclick="closeChatbot()">Close</button>
+        </div>
+        <div id="chatbox">
+          <div id="chatbotMessages"></div>
+          <div id="userInput">
+            <input
+              type="text"
+              id="userMessage"
+              placeholder="Type your message here"
+            />
+            <button onclick="sendMessage()">Send</button>
+          </div>
+        </div>
+      </div>
 
-  <!-- Chatbot Button -->
-  <button id="chatbotButton" onclick="openChatbot()">Chatbot</button>
+      <!-- MIC BUTTON -->
+      <div class="mic-icon" onclick="startVoiceSearch()"></div>
 
-  <!-- Chatbot Area -->
-  <div id="chatbotContainer" style="display: none;">
-    <div id="chatbotHeader">
-      <h2>Chatbot</h2>
-      <button onclick="closeChatbot()">Close</button>
-  </div>
-  <div id="chatbox">
-    <div id="chatbotMessages"></div>
-     <div id="userInput">
-       <input type="text" id="userMessage" placeholder="Type your message here">
-       <button onclick="sendMessage()">Send</button>
-     </div>
-   </div>
- </div>
+      <!-- Search History -->
+      <div id="searchHistory">
+        <h2>Search History</h2>
+        <ul id="historyList">
+          <!-- Search history items will be dynamically added here -->
+        </ul>
+      </div>
 
- <!-- MIC BUTTON -->
- <div class="mic-icon" onclick="startVoiceSearch()"></div>
+      <!-- JavaScript Libraries -->
+      <script
+        src="https://kit.fontawesome.com/1a44a648d1.js"
+        crossorigin="anonymous"
+      ></script>
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-webgl"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-js"></script>
+      <script src="src/Javascript/script.js"></script>
+      <script src="src/Javascript/discordbot.js"></script>
+      <script src="src/Javascript/speak.js"></script>
+      <script src="src/Javascript/autocomplete.js"></script>
+      <script src="src/Javascript/login.js"></script>
+      <script type="module" src="src/Javascript/searchhistory.js"></script>
+      <script src="src/Javascript/chatbot.js"></script>
+      <script type="module" src="src/Javascript/elixe.js"></script>
+      <script src="src/Javascript/searchresult.js"></script>
+      <script type="module" src="src/Javascript/redis.js"></script>
+      <script src="src/Javascript/Events/notifications.js"></script>
+      <script>
+        const { autocomplete } = window['@algolia/autocomplete-js'];
+      </script>
+      <script>
+        const client = algoliasearch('U71UY2TGG6', 'bea1b2146219e2eeb2fd54c1461646e8');
+        const index = client.initIndex('SEARCH_ENGINE');
+        
+        autocomplete('#searchInput', { hint: false }, [
+          {
+            source: autocomplete.sources.hits(index, { hitsPerPage: 5 }),
+            displayKey: 'title',
+            templates: {
+              suggestion: function(suggestion) {
+                return suggestion._highlightResult.title.value;
+              }
+            }
+          }
+        ]);
+      </script>        
+      <script>
+        function openChatbot() {
+          const chatbotContainer = document.getElementById("chatbotContainer");
+          const chatInput = document.getElementById("chatInput");
+          const chatLog = document.getElementById("chatLog");
 
+          chatbotContainer.style.display = "block";
 
-  <!-- Search History -->
-  <div id="searchHistory">
-    <h2>Search History</h2>
-    <ul id="historyList">
-      <!-- Search history items will be dynamically added here -->
-    </ul>
-  </div>
+          chatInput.focus();
 
-  <!-- JavaScript Libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-webgl"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
-  <script src="Javascript/script.js"></script>
-  <script src="Javascript/discordbot.js"></script>
-  <script src="Javascript/searchhistory.js"></script>
-  <script src="Javascript/speak.js"></script>
-  <script src="Javascript/login.js"></script>
-  <script src="Javascript/chatbot.js"></script>
-  <script src="Javascript/autocomplete.js"></script>
-  <script src="Javascript/elixe.js"></script>
-  <script src="Javascript/searchresult.js"></script>
-  <script src="Javascript/redis.js"></script>
-  <script>
-  var autocompleteData = [
-    "apple",
-    "banana",
-    "orange",
-    "grapes",
-    // Add more autocomplete suggestions here
-  ];
+          chatInput.addEventListener("keydown", async (event) => {
+            if (event.key === "Enter") {
+              event.preventDefault();
+              const userMessage = chatInput.value.trim();
+              chatInput.value = "";
 
-  autocomplete(document.getElementById("searchInput"), autocompleteData);
-  </script>
-  <script>
-    // Function to handle opening the chatbot area
-    function openChatbot() {
-      const chatbotContainer = document.getElementById('chatbotContainer');
-      const chatInput = document.getElementById('chatInput');
-      const chatLog = document.getElementById('chatLog');
+              const userMessageDiv = document.createElement("div");
+              userMessageDiv.textContent = "You: " + userMessage;
+              chatLog.appendChild(userMessageDiv);
 
-      // Show the chatbot container
-      chatbotContainer.style.display = 'block';
+              const botResponse = await chatbotResponse(userMessage);
 
-      // Focus on the chat input box
-      chatInput.focus();
-
-      // Listen for user input and display chatbot responses
-      chatInput.addEventListener('keydown', async (event) => {
-        if (event.key === 'Enter') {
-          event.preventDefault();
-          const userMessage = chatInput.value.trim();
-          chatInput.value = '';
-
-          // Display user message in the chat log
-        const userMessageDiv = document.createElement('div');
-        userMessageDiv.textContent = 'You: ' + userMessage;
-        chatLog.appendChild(userMessageDiv);
-
-        // Get the chatbot response
-        const botResponse = await chatbotResponse(userMessage);
-
-        // Display chatbot response in the chat log
-        const botResponseDiv = document.createElement('div');
-        botResponseDiv.textContent = 'Chatbot: ' + botResponse;
-        chatLog.appendChild(botResponseDiv);
+              const botResponseDiv = document.createElement("div");
+              botResponseDiv.textContent = "Chatbot: " + botResponse;
+              chatLog.appendChild(botResponseDiv);
+            }
+          });
         }
-      });
-    }
-  </script>
+      </script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script>
+        $(document).ready(function () {
+          $("#searchButton").click(function () {
+            var searchQuery = $("#searchInput").val();
 
-</body>
+            $.ajax({
+              url: "/get_search_results",
+              method: "POST",
+              data: { query: searchQuery },
+              success: function (data) {
+                $("#searchResults").html(data);
+              },
+              error: function (error) {
+                console.error("Error:", error);
+              },
+            });
+          });
+        });
+      </script>
+      <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyAUkhOio4psQxTMdHtMgtpb_o9DPJaugI4",
+          authDomain: "search-engine-35047.firebaseapp.com",
+          projectId: "search-engine-35047",
+          storageBucket: "search-engine-35047.appspot.com",
+          messagingSenderId: "464154815166",
+          appId: "1:464154815166:web:f657f42dfc3de68a308cef",
+          measurementId: "G-ZLWCH0K073",
+        };
+        firebase.initializeApp(firebaseConfig);
+
+        // Initialize Firebase Messaging
+        const messaging = firebase.messaging();
+
+        // Request permission for notifications
+        messaging
+          .requestPermission()
+          .then(() => {
+            console.log("Notification permission granted.");
+          })
+          .catch((err) => {
+            console.error("Unable to get permission for notifications.", err);
+          });
+      </script>
+    </header>
+  </body>
 </html>
