@@ -23,7 +23,7 @@ async function sendTokenToServer(token) {
   }
   
   // Get the current registration token
-  messaging.getToken({ vapidKey: 'BJ7OWqX8g8A2eOM9EDs99S2z4PKTqqh-TFUIr4LkPiMlWLPLDioA4Bf6eVbVMr15LKZ8eHqnzOU69dN7nmovlnE' }).then((currentToken) => {
+  messaging.getToken({ vapidKey: 'YOUR_PUBLIC_VAPID_KEY' }).then((currentToken) => {
     if (currentToken) {
       sendTokenToServer(currentToken);
     } else {
