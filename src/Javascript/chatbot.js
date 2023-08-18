@@ -2,7 +2,7 @@
 async function processUserMessage(message) {
   try {
     // Replace 'YOUR_API_KEY' with your actual OpenAI API key
-    const apiKey = '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';
+    const apiKey = 'YOUR_OPENAI_API_KEY';
 
     // Set up the headers for the API request
     const headers = {
