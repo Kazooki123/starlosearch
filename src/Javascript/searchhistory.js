@@ -1,8 +1,8 @@
 const Redis = require('ioredis');
 const redisClient = new Redis({
-  host: 'redis-19035.c302.asia-northeast1-1.gce.cloud.redislabs.com:19035',
-  port: 19035,
-  password: 'hDXBdzvuWmByNNkuhYqfg4khLZACzma5',
+  host: 'REDIS_HOST',
+  port: REDIS_PORT,
+  password: 'REDIS_PASSWORD',
 });
 
 async function saveSearchQuery(query) {
