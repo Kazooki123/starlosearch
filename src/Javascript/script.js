@@ -20,7 +20,7 @@ function viewImages() {
   var searchQuery = document.getElementById('searchInput').value;
 
   // Make a GET request to the Google Search API with searchType set to "image"
-  fetch(`https://www.googleapis.com/customsearch/v1?key=AIzaSyBkc8B7LNvNoJPv6LOVveEE2T_zpSvG_uQ&cx=03d9c25b28b784a57&q=${searchQuery}&searchType=image`)
+  fetch(`https://www.googleapis.com/customsearch/v1?key=YOUR_API_KEY&cx=YOUR_ENGINE_ID&q=${searchQuery}&searchType=image`)
     .then(response => response.json())
     .then(data => {
       // Process the API response and display the image results
@@ -36,7 +36,8 @@ function viewVideos() {
   var searchQuery = document.getElementById('searchInput').value;
 
   // Make a GET request to the YouTube Data API to fetch video search results
-  fetch(`https://www.googleapis.com/youtube/v3/search?key=AIzaSyCgRiy4eJoesdaiAYjLDZD8iPO7O_q0aYM&q=${searchQuery}&part=snippet&type=video`)
+  // Replace YOUTUBE_KEY with the Youtube Data API key
+  fetch(`https://www.googleapis.com/youtube/v3/search?key=YOUTUBE_KEY&q=${searchQuery}&part=snippet&type=video`)
     .then(response => response.json())
     .then(data => {
       // Process the API response and display the video results
@@ -65,8 +66,10 @@ function sendImageRecognitionRequest(urls) {
     });
 }
 
+// Note: You can remove this code due to it's error functionality, updates coming soon about this code
+// Feel free to remove it
 // Example usage:
-var imageUrls = ['https://upload.wikimedia.org/wikipedia/commons/2/2f/Hentai_-_yuuree-redraw.jpg', 'https://img-egc.xvideos-cdn.com/videos/thumbs169poster/28/6c/c7/286cc75779f3bc1f65cbf8848f128a08/286cc75779f3bc1f65cbf8848f128a08.2.jpg', 'https://cdn77-pic.xvideos-cdn.com/videos/thumbs169poster/2f/f2/bf/2ff2bf5c1e382b44eb3e6220ef182cbb/2ff2bf5c1e382b44eb3e6220ef182cbb.30.jpg'];
+var imageUrls = ['url1', 'url1', 'url3'];
 sendImageRecognitionRequest(imageUrls);
 
 // Function to perform image recognition using TensorFlow.js
@@ -94,6 +97,8 @@ historyLink.addEventListener("click", function () {
     searchHistory.style.display === "none" ? "block" : "none";
 });
 
+// This use to load the search result page but it failed so 
+// Remove this if you wish
 function loadSearchResultPage() {
   var xhr = new XMLHttpRequest();
   var url = "search-result.html";
