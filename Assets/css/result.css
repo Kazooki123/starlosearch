@@ -1,0 +1,45 @@
+/* result.css */
+
+/* Style for the search results container */
+#searchResults {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Style for individual search result items */
+  .searchResult, .imageResult {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Style for search result links */
+  .searchResult h3 a {
+    text-decoration: none;
+    color: #007BFF;
+  }
+  
+  .searchResult p {
+    margin: 10px 0;
+  }
+  
+  /* Style for image search results */
+  .imageResult img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Style for the "No results found" message */
+  #searchResults:empty::before {
+    content: 'No results found.';
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 18px;
+    color: #888;
+  }
+  
