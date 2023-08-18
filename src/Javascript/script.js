@@ -4,7 +4,7 @@ function search() {
 
   // Make a GET request to the Google Search API
  // Replace "YOUR_API_KEY" to your actual Google Search API key
-  fetch(`https://www.googleapis.com/customsearch/v1?key=AIzaSyBkc8B7LNvNoJPv6LOVveEE2T_zpSvG_uQ&cx=03d9c25b28b784a57&q=${searchQuery}`)
+  fetch(`https://www.googleapis.com/customsearch/v1?key=YOUR_API_KEY&cx=YOUR_ENGINE_ID&q=${searchQuery}`)
     .then(response => response.json())
     .then(data => {
       // Process the API response and display the search results
