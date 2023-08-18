@@ -1,0 +1,12 @@
+{
+  "configurations": [
+    {
+      "name": "Win32",
+      "includePath": ["${workspaceFolder}/**/*.h", "${workspaceFolder}/**/*.hpp"],
+      "defines": ["_DEBUG", "UNICODE", "_UNICODE"],
+      "intelliSenseMode": "msvc-x64",
+      "compilerPath": "C:\\path\\to\\your\\C++\\compiler\\g++.exe"
+    }
+  ],
+  "version": 4
+}
