@@ -1,21 +1,18 @@
 # Security Policy
 
-## Supported Versions
-
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
-
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+At [Your Project Name], we take security seriously. We appreciate your efforts to keep the project secure and ensure the safety of our users. If you discover a security vulnerability, please follow these guidelines to report it responsibly.
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+If you discover a security vulnerability, please report it to us via email at [your-email@example.com]. Please do not disclose the vulnerability publicly until we have addressed it. To help us understand and address the issue, please provide the following details:
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+- Detailed description of the vulnerability
+- Steps to reproduce the vulnerability
+- Information about the environment (versions, configurations, etc.)
+- Potential impact of the vulnerability
+
+## Responsible Disclosure
+
+We kindly request that you do not publicly disclose any potential vulnerabilities without giving us the opportunity to investigate and address them. We are committed to fixing valid security issues and providing appropriate credit to researchers who responsibly disclose vulnerabilities.
+
+Thank you for helping us ensure the security of [Your Project Name]!
