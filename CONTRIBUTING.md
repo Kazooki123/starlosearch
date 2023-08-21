@@ -34,4 +34,4 @@ We welcome suggestions for new features or improvements! To request a new featur
 
 Your feedback is important to us! If you have suggestions or ideas to improve the project, feel free to open an issue or reach out to us.
 
-Thank you for contributing to [Your Project Name]!
+Thank you for contributing to StarloSearch!
