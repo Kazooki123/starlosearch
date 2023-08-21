@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History</title>
+    <link rel="icon" type="image/png" href="Images/favicon_io/android-chrome-512x512.png" />
+    <link rel="stylesheet" href="Assets/css/navbar.css" />
+    <link rel="stylesheet" href="Assets/css/history.css" />
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <input type="checkbox" id="menu" hidden />
+            <label for="menu">
+              <i class="fa-solid fa-bars"></i>
+              <i class="fa-solid fa-x"></i>
+            </label>
+            <div class="logo">
+              <h1>StarloSearch</h1>
+            </div>
+            <nav>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="history.html">History</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- Search History -->
+          <div id="searchHistory">
+            <h2>Search History</h2>
+            <ul id="historyList">
+              <!-- Search history items will be dynamically added here -->
+            </ul>
+          </div>
+
+          <div id="historyBox">
+            <ul id="historyList"></ul>
+            <button id="clearButton">
+              <i class="fa-solid fa-x"></i> Clear History
+            </button>
+          </div>
+          
+          <script src="https://kit.fontawesome.com/1a44a648d1.js"
+          crossorigin="anonymous"></script>
+          <script src="src/Javascript/searchhistory.js"></script>
+          <script src="script.js"></script>
+    </header>
+</body>
+</html>
