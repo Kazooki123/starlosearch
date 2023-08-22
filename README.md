@@ -107,6 +107,17 @@ That's it! You have successfully set up and run your Search Engine project using
 # License
 StarloSearch is licensed under the MIT License. See LICENSE for more information.
 
+# Contributing and Improvements!🚀
+
+- [x] Creating helpful features and better design
+- [x] NSFW image & video filter
+- [x] Privacy for user's around the world
+- [x] Fast and timing databases
+- [x] Secure data and informations
+- [x] Web scrapping libraries or models
+- [x] Machine Learning such as a Chatbot
+- [x] Suspecious link detector from attackers
+
 # Contact
 If you have any questions, feedback, or suggestions, feel free to reach out to us at mgamerdinge146@gmail.com or open an issue on our GitHub repository.
 ### For Additional Contacts
