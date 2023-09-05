@@ -2,15 +2,23 @@
 
 @font-face {
   font-family: 'Roboto';
-  src: url('assets/fonts/Roboto-Regular.ttf') format('truetype');
+  src: url('Assets/fonts/Roboto-Regular.ttf') format('truetype');
   /* Add more font weights and styles as needed */
 }
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: white;
+    color: black;
     margin: 0;
     padding: 0;
+    transition: background 0.2s linear;
+  }
+
+  .dark-mode {
+    background-color: black;
+    color: white;
+    transition: background 0.2s linear;
   }
   
   /* Main Content */
@@ -272,4 +280,32 @@ body {
     height: 8px;
     border-radius: 50%;
     background-color: red;
+  }
+
+  /* Microphone icon styles */
+  .microphone-icon {
+    position: fixed;
+    bottom: 20px; /* Adjust this value as needed */
+    font-size: 24px; /* Adjust this value as needed */
+    z-index: 9999; /* Ensure it's on top of other elements */
+  }
+
+  .bottom-right {
+    right: 20px;
+  }
+
+  .logo {
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+  .fa-bars {
+    color: #fff;
+  }
+
+  .translate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
   }
