@@ -1,6 +1,6 @@
 # Contributing to StarloSearch
 
-Thank you for considering contributing to [Your Project Name]! We welcome contributions from the community to help improve and enhance the project. Before you start, please take a moment to read through this guide to understand how you can contribute.
+Thank you for considering contributing to StarloSearch! We welcome contributions from the community to help improve and enhance the project. Before you start, please take a moment to read through this guide to understand how you can contribute.
 
 ## How to Contribute
 
