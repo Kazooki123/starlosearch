@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --text-color:rgb(110,110,110);
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #292C35;
+}
+.container{
+    width: 350px;
+    background: #fff;
+    padding: 30px;
+    position: relative;
+}
+h6{
+    font-size: 20px;
+    color: var(--text-color);
+}
+span{
+    position: absolute;
+    right: 34px;
+    top: 28px;
+    font-size: 18px;
+    color: var(--text-color);
+}
+h1{
+    padding: 30px 0px;
+    font-size: 40px;
+    color: var(--text-color);
+}
+form label{
+    color: var(--text-color);
+    text-transform: uppercase;
+    position: relative;
+    font-size: 10px;
+    word-spacing: 4px;
+}
+form select{
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(223,223,223);
+    text-transform: capitalize;
+    padding-top: 3px;
+    color: var(--text-color);
+    padding-bottom: 3px;
+    font-size: 18px;
+    margin-left: -3px;
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+form #cardno{
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(223,223,223);
+    padding-top: 5px;
+    margin-bottom: 20px;
+    padding-right: 30px;
+    color: var(--text-color);
+    font-size: 18px;
+    background-color: transparent;
+    padding-bottom: 5px;
+}
+.float{
+    display: flex;
+}
+#validtill , #cvv{
+    border: none;
+    border-bottom: 1px solid rgb(207,207,207);
+    outline: none;
+    width: 130px;
+    padding-top: 14px;
+    margin-bottom: 56px;
+    color: var(--text-color);
+    background-color: transparent;
+    font-size: 18px;
+}
+p{
+    margin: -20px 0px 56px 25px;
+    font-size: 16px;
+    text-transform: none;
+}
+button{
+    border: none;
+    outline: none;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    background-color: rgb(223,220,220);
+    color: rgb(31,30,30);
+    padding: 10px;
+    font-weight: bold;
+}

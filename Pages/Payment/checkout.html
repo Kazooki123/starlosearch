@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <div class="container">
+        <h6>Star Premium</h6>
+        <span>x</span>
+        <h1>Payment Method</h1>
+        <form action="">
+            <label for="country">Country
+                <select name="country" id="country">
+                    <option value="India">India</option>
+                    <option value="England">England</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Philippines">Philippines</option>
+                    <option value="USA">USA</option>
+                    <option value="Canada">Canada</option>
+                    <option value="France">France</option>
+                    <option value="Japan">Japan</option>
+                </select>
+            </label>
+            <label for="cardno">Card Number
+                <input type="text" name="cardno" id="cardno" maxlength="19" onkeypress="cardspace()"/>
+            </label>
+            <div class="float">
+                <label for="validtill">Valid till
+                    <input type="text" name="validtill" id="validtill" maxlength="7" onkeypress="addSlashes()"/>
+                </label>
+                <label for="cvv">CVV
+                    <input type="text" name="cvv" id="cvv" maxlength="3"/>
+                </label>
+            </div>
+                <label for="checkbox">
+                    <input type="checkbox" name="checkbox" id="checkbox"/>
+                    <p>Payment Address is the same as the Delivery Address</p>
+                </label>
+                <button>Pay $20.07</button>
+        </form>
+    </div>
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&components=YOUR_COMPONENTS"></script>
+    <script src="stripe_pay.js"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&components=buttons"></script>
+    <script src="paypal.js"></script>
+</body>
+</html>

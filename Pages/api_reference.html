@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Guides</title>
+    <link rel="stylesheet" href="../Assets/css/api_reference.css">
+</head>
+<body>
+    <h1>StarloSearch API Reference</h1>
+    <p>Welcome to the StarloSearch API Reference. Below, you'll find detailed information about the available API endpoints and how to use them.</p>
+
+    <!--API documenation here-->
+    <section>
+        <h1>StarloSearch Engine API Guide</h1>
+        <p>
+            The StarloSearch Engine API is a powerful tool that allows you to search for and retrieve information from the StarloSearch Engine. The API is easy to use and provides a variety of features that can be used to create custom search applications.
+        </p>
+    </section>
+
+    <section>
+        <h1>Getting started with the StarloSearch Engine API</h1>
+        <p>
+            To get started with the StarloSearch Engine API, you will need to create an account and obtain an API key. You can do this by visiting the StarloSearch Engine website and clicking on the "API" tab.
+
+            Once you have obtained an API key, you can start using the API to search for and retrieve information from the StarloSearch Engine.
+
+            <li>Making a request</li>
+
+            To make a request to the StarloSearch Engine API, you will need to send an HTTP GET request to the following endpoint:
+
+            <pre>http://api.starlosearch.com/search</pre>
+
+            <li>You will need to include the following parameters in your request:</li>
+
+            <li>q: The search query.</li>
+            <li>api_key: Your API key.</li>
+            <li>For example, the following request will search for the term "cats":</li>
+
+            <pre>http://api.starlosearch.com/search?q=cats&api_key=YOUR_API_KEY</pre>
+
+            <li>Response</li>
+
+            <li>The response to a search request is a JSON object that contains the following information:</li>
+
+            <li>results: An array of search results.</li>
+            <li>total_results: The total number of search results.</li>
+            <li>Each search result in the results array contains the following information:</li>
+
+            <li>title: The title of the search result.</li>
+            <li>description: A brief description of the search result.</li>
+            <li>url: The URL of the search result.</li>
+        </p>
+    </section>
+
+    <!-- Example API Endpoints -->
+    <h2>Search API</h2>
+    <p>Endpoint: <code>/api/search</code></p>
+    <p>Description: Use this API to perform a search on StarloSearch.</p>
+    <p>HTTP Method: GET</p>
+    <p>Parameters:</p>
+    <ul>
+        <li><code>query</code> (string): The search query</li>
+        <li><code>limit</code> (number): The maximun number of results to return (optional).</li>
+    </ul>
+    <p>Example Request:</p>
+    <pre>
+        GET /api/search?query=programming
+    </pre>
+    <p>Example Response:</p>
+    <pre>
+        {
+            "results": [
+            "Result 1",
+            "Result 2",
+            "Result 3"
+            ]
+        }
+    </pre>
+
+    <!-- Add more API endpoints and documentation as needed -->
+
+    <!-- Include a Javascript to interact with the APIs here -->
+
+    <!-- Link to API keys access page -->
+    <p>For access to the StarloSearch APIs, you'll need an API key, You can manage your API keys <a href="api-keys_access.html">here</a>.</p>
+</body>
+</html>

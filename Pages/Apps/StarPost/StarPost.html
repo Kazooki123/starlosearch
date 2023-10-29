@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="starpost.css">
+    <link rel="stylesheet" href="post.css">
+    <title>StarPost</title>
+</head>
+<body>
+    <header>
+        <h1>StarPost</h1>
+    </header>
+
+    <section id="postForm">
+        <h2>Create a New Post</h2>
+        <form id="createPostForm">
+            <input type="text" id="titleInput" placeholder="Title">
+            <input type="text" id="imageURLInput" placeholder="Image URL">
+            <textarea id="captionInput" placeholder="Caption"></textarea>
+            <button type="submit">Post</button>
+        </form>
+    </section>
+
+    <section id="posts">
+        <!-- Posts will be dynamically added here -->
+    </section>
+
+    <script src="script.js"></script>
+    <script src="image_post.js"></script>
+</body>
+</html>

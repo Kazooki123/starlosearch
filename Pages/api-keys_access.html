@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Keys Access</title>
+    <link rel="icon" type="image/jpg" href="../Images/Api_logo.jpg">
+    <link rel="stylesheet" href="../Assets/css/api_access.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Generate API Key</h1>
+        <form id="api-key-form">
+            <label for="key-name">Key Name:</label>
+            <input type="text" name="key-name" id="key-name" required>
+            <button type="button" id="generate-key">Generate API Key</button>
+        </form>
+        <div id="api-key-result"></div>
+    </div>
+    
+    <p>For detailed information on how to use StarloSearch APIs, please refer to the <a href="api_reference.html">API Reference</a>.</p>
+    <script>
+        const apiKeyForm = document.getElementById('api-key-form');
+        const generateKeyButton = document.getElementById('generate-key');
+        const apiKeyResult = document.getElementById('api-key-result');
+        
+        generateKeyButton.addEventListener('click', () => {
+            // AJAX request to an API key
+            fetch('http://localhost:8080/generate')
+            .then(response => response.json())
+            .then(data => {
+                apiKeyResult.innerHTML = `API Key: ${data.key}`;
+            })
+            .catch(error => {
+                apiKeyResult.innerHTML = error;
+            });
+        });
+    </script>
+</body>
+</html>
