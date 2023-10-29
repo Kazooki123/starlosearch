@@ -1,34 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>StarloSearch</title>
-    <link rel="icon" type="image/png" href="Images/furrygirl.jpg" />
-    <link rel="stylesheet" href="Assets/css/style.css" />
-    <link rel="stylesheet" href="Assets/css/discordbot.css" />
-    <link rel="stylesheet" href="Assets/css/navbar.css" />
+    <link rel="icon" type="image/png" href="Images/favicon_io/android-chrome-512x512.png">
+    <link rel="stylesheet" href="Assets/css/style.css">
+    <link rel="stylesheet" href="Assets/css/discordbot.css">
+    <link rel="stylesheet" href="Assets/css/navbar.css">
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css">
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
   </head>
   <body>
     <header>
-      <div class="navbar">
-        <input type="checkbox" id="menu" hidden />
-        <label for="menu">
-          <i class="fa-solid fa-bars"></i>
-          <i class="fa-solid fa-xmark"></i>
-        </label>
-        <div class="logo">
-          <h1>StarloSearch</h1>
-        </div>
-        <nav>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Search</a></li>
-            <li><a href="#" onclick="showSearchHistory()">History</a></li>
-          </ul>
-        </nav>
-      </div>
+      <header class="header">
+         <div class="navbar">
+           <input type="checkbox" id="menu" hidden />
+           <label for="menu">
+             <i class="fa-solid fa-bars"></i>
+             <i class="fa-solid fa-xmark"></i>
+           </label>
+           <div class="logo">
+             <h1>StarloSearch</h1>
+           </div>
+           <nav>
+             <ul>
+               <a href="index.html">
+                <i class="fa-solid fa-house fa-fade"></i>
+               </a>
+               <a href="Pages/login.html">
+                <i class="fa-solid fa-user"></i>
+               </a>
+               <a href="Pages/products.html">
+                <i class="fa-solid fa-shop"></i>
+               </a>
+               <a href="Pages/history.html">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+               </a>
+               <a href="Pages/about.html">
+                <i class="fa-solid fa-circle-question"></i>
+               </a>
+               <a href="Pages/Payment/checkout.html">
+                <i class="fa-solid fa-star" style="color: #eb242e;"></i>
+               </a>
+             </ul>
+           </nav>
+         </div>
+      </header>
 
       <!-- This is the container where the content of search-result.html will be loaded -->
       <div id="mainContent">
@@ -66,9 +85,32 @@
           />
           <div id="autocompleteItems" class="autocomplete-items"></div>
         </div>
-        <button onclick="search()">Search</button>
-        <button onclick="viewImages()">View Images</button>
-        <button onclick="viewVideos()">View Videos</button>
+        <button onclick="search()">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button onclick="viewImages()">
+          <i class="fa-solid fa-image"></i>
+        </button>
+        <button onclick="viewVideos()">
+          <i class="fa-solid fa-video"></i>
+        </button>
+        <div>
+          <a href="Pages/starlo_translate.html">
+            <button>
+              <i class="fa-solid fa-language"></i>
+            </button>
+          </a>
+        </div>
+        <div>
+          <a href="https://open.spotify.com/?">
+            <button>
+              <i class="fa-brands fa-spotify" style="color: #000000;"></i>
+            </button>
+          </a>
+        </div>
+        <button onclick="darkMode()">
+          <i class="fa-solid fa-moon"></i>
+        </button>
       </div>
 
       <!-- Search Results -->
@@ -86,7 +128,9 @@
       <div id="chatbotContainer" style="display: none">
         <div id="chatbotHeader">
           <h2>Chatbot</h2>
-          <button onclick="closeChatbot()">Close</button>
+          <button onclick="closeChatbot()">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
         </div>
         <div id="chatbox">
           <div id="chatbotMessages"></div>
@@ -96,7 +140,9 @@
               id="userMessage"
               placeholder="Type your message here"
             />
-            <button onclick="sendMessage()">Send</button>
+            <button onclick="sendMessage()">
+              <i class="fa-solid fa-comment"></i>
+            </button>
           </div>
         </div>
       </div>
@@ -104,19 +150,15 @@
       <!-- MIC BUTTON -->
       <div class="mic-icon" onclick="startVoiceSearch()"></div>
 
-      <!-- Search History -->
-      <div id="searchHistory">
-        <h2>Search History</h2>
-        <ul id="historyList">
-          <!-- Search history items will be dynamically added here -->
-        </ul>
+      <!-- Microphone button - Bottom left -->
+      <div class="microphone-button bottom-left">
+        <button class="microphone-icon" onclick="startMusicRecognition()">
+          <i class="fa-solid fa-microphone"></i>
+        </button>
       </div>
 
       <!-- JavaScript Libraries -->
-      <script
-        src="https://kit.fontawesome.com/1a44a648d1.js"
-        crossorigin="anonymous"
-      ></script>
+      <script src="https://kit.fontawesome.com/1a44a648d1.js" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
       <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter"></script>
@@ -124,63 +166,98 @@
       <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
       <script src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-js"></script>
       <script src="src/Javascript/script.js"></script>
+      <script src="src/Javascript/logging.mjs"></script>
       <script src="src/Javascript/discordbot.js"></script>
       <script src="src/Javascript/speak.js"></script>
+      <script src="src/Javascript/music_search.js"></script>
       <script src="src/Javascript/autocomplete.js"></script>
-      <script src="src/Javascript/login.js"></script>
-      <script type="module" src="src/Javascript/searchhistory.js"></script>
-      <script src="src/Javascript/chatbot.js"></script>
-      <script type="module" src="src/Javascript/elixe.js"></script>
+      <script src="src/Javascript/searchhistory.js"></script>
+      <script src="src/Javascript/Logs/audit-logs.js"></script>
+      <script type="module" src="src/Javascript/elixe.mjs"></script>
       <script src="src/Javascript/searchresult.js"></script>
-      <script type="module" src="src/Javascript/redis.js"></script>
       <script src="src/Javascript/Events/notifications.js"></script>
+      <script src="src/Javascript/Security/log_signal.js"></script>
+      <script src="src/Javascript/A.I/response.js"></script>
+      <script type="module" src="src/Javascript/Database/mysql.js"></script>
+      <script type="module" src="src/Javascript/Database/mongodb.js"></script>
+      <script type="module" src="src/Javascript/Database/http_request.js"></script>
+      <script type="module" src="src/Javascript/login.mjs"></script>
       <script>
-        const { autocomplete } = window['@algolia/autocomplete-js'];
+        const checkbox = document.getElementById('checkbox');
+
+        checkbox.addEventListener('change', () => {
+            document.body.classList.toggle('dark');
+        });
       </script>
       <script>
-        const client = algoliasearch('ALGOLIA_ID', 'ALGOLIA_SEARCH-ONLY_API_KEY');
-        const index = client.initIndex('INDEX_NAME');
-        
-        autocomplete('#searchInput', { hint: false }, [
-          {
-            source: autocomplete.sources.hits(index, { hitsPerPage: 5 }),
-            displayKey: 'title',
-            templates: {
-              suggestion: function(suggestion) {
-                return suggestion._highlightResult.title.value;
-              }
-            }
-          }
-        ]);
-      </script>        
+        function darkMode() {
+           var element = document.body;
+           element.classList.toggle("dark-mode");
+        }
+      </script>  
       <script>
         function openChatbot() {
-          const chatbotContainer = document.getElementById("chatbotContainer");
-          const chatInput = document.getElementById("chatInput");
-          const chatLog = document.getElementById("chatLog");
-
           chatbotContainer.style.display = "block";
-
-          chatInput.focus();
-
-          chatInput.addEventListener("keydown", async (event) => {
-            if (event.key === "Enter") {
-              event.preventDefault();
-              const userMessage = chatInput.value.trim();
-              chatInput.value = "";
-
-              const userMessageDiv = document.createElement("div");
-              userMessageDiv.textContent = "You: " + userMessage;
-              chatLog.appendChild(userMessageDiv);
-
-              const botResponse = await chatbotResponse(userMessage);
-
-              const botResponseDiv = document.createElement("div");
-              botResponseDiv.textContent = "Chatbot: " + botResponse;
-              chatLog.appendChild(botResponseDiv);
-            }
-          });
         }
+        
+        function displayMessage(message, isBot = false) {
+          const messageDiv = document.createElement("div");
+          messageDiv.className = isBot ? "bot-message" : "user-message";
+          messageDiv.textContent = message;
+          chatbotMessages.appendChild(messageDiv);
+        }
+
+        function sendMessage() {
+          const userMessage = document.getElementById('userMessage').value;
+          const chabotMessages = document.getElementById('chatbotMessages'); 
+
+          chatbotMessages.innerHTML += '<div>User: ' + userMessage + '</div>';
+
+          const chatbotResponse = 'Hello, I am SpaceAI!';
+
+          chatbotMessages.innerHTML += '<div>Bot: ' + chatbotResponse + '</div>';
+
+          document.getElementById('userMessage').value = '';
+        }
+
+        function handleUserMessage(message) {
+          if (message.toLowerCase().includes("hello")) {
+            displayMessage("Hello! How can I assist you today?", true);
+          } else if (message.toLowerCase().includes("goodbye")) {
+            displayMessage("Goodbye! Have a great day!", true);
+          } else {
+            displayMessage("I'm sorry, I don't understand that request.", true);
+          }
+        }
+
+
+      </script>
+      <script>
+        function closeChatbot() {
+          chatbotContainer.style.display = 'none';
+        }
+        const closeButton = document.getElementById('closeButton');
+        closeButton.addEventListener('click', closeChatbot);
+      </script>
+      <script>
+        fetch('src/Php/server.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                action: 'login',
+                username: 'myUsername',
+                password: 'myPassword'
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+
+        })
+        .catch(error => {
+            
+        });
       </script>
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script>
@@ -201,39 +278,6 @@
             });
           });
         });
-      </script>
-      <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-          apiKey: "API KEY",
-          authDomain: "DOMAIN",
-          projectId: "ID",
-          storageBucket: "BUCKET",
-          messagingSenderId: "SENDER_ID",
-          appId: "APP_ID",
-          measurementId: "MEASEURMENT_ID",
-        };
-        firebase.initializeApp(firebaseConfig);
-
-        // Initialize Firebase Messaging
-        const messaging = firebase.messaging();
-
-        // Request permission for notifications
-        messaging
-          .requestPermission()
-          .then(() => {
-            console.log("Notification permission granted.");
-          })
-          .catch((err) => {
-            console.error("Unable to get permission for notifications.", err);
-          });
       </script>
     </header>
   </body>
