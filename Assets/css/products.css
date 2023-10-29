@@ -1,0 +1,42 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-image: url('../../Images/blurry-gradient-haikei.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+    color: #0C090A;
+}
+
+nav {
+    float: right;
+  }
+
+.sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-image: url('../../Images/blurry-gradient-haikei.png');
+    backdrop-filter: blur(5px);
+    overflow-y: auto;
+}
+
+.content {
+    margin-left: 260px; /* Adjust as needed based on sidebar width */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 10px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #333;
+}

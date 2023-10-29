@@ -1,0 +1,17 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-image: url('../../Images/layered-waves-haikei.png');
+    backdrop-filter: blur(5px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+    color: whitesmoke;
+}
+nav {
+    float: right;
+  }
+
+p {
+    backdrop-filter: none;
+}
