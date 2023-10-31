@@ -1,27 +1,37 @@
 <?php
-session_start();
+include('database.php');
 
-include 'database.php';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-$id = $_SESSION['id'];
+    $query = $db->prepare("SELECT * FROM users WHERE username = :username");
+    $query->bindParam(':username', $username);
+    $query->execute();
+    $user = $query->fetch(PDO::FETCH_ASSOC);
 
-$sql = $pdo->prepare('SELECT * FROM users WHERE id = :id');
-$sql->execute(array('id' => $id));
-
-$user = $sql->fetch();
-
-if ($user) {
-    echo '<h2>Welcome to Starlosearch</h2>';
-    echo '<p><b>Welcome</b>'.$user['username'].', You are now logged in.</p>';
-    echo '<p>Username: '.$user['username'].'</p>';
-    echo '<p>Email:'.$user['email'].'</p>';
-    echo '<p>First Name:'.$user['fname'].'</p>';
-    echo '<p>Last Name:'.$user['lname'].'</p>';
-    echo '<p>Mobile:'.$user['mobile'].'</p>';
-    echo '<p>Address:'.$user['address'].'</p>';
-    echo '<p>Country:'.$user['country'].'</p>';
-    echo '<div class="text-center">Want to leave the page? <br><a href="logout.php">Logout</a></div>';
-} else {
-    echo '<p>No user found with id:'.$id.'</p>';
+    if ($user && password_verify($password, $user['password'])) {
+        echo "Login successful!";
+    } else {
+        echo "Login failed. Please check your credentials.";
+    }
 }
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+</head>
+<body>
+    <h2>Login</h2>
+    <form method="post" action="home.php">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" require><br>
+
+        <label for="password" name="password" id="password" required><br>
+
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>
