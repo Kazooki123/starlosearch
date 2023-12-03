@@ -39,7 +39,7 @@ function viewImages() {
 function viewVideos() {
   var searchQuery = document.getElementById('searchInput').value;
 
-  fetch('https://www.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_API_KEY}&cx=${process.env.GOOGLE_API_ENGINE}&q=${searchQuery}&searchType=video')
+  fetch(`https://www.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_API_KEY}&cx=${process.env.GOOGLE_API_ENGINE}&q=${searchQuery}&searchType=video`)
   .then(response => response.json())
   .then(data => {
     displayVideoResults(data);
