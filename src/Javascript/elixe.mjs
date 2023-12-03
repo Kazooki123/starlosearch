@@ -1,7 +1,7 @@
 import { Client } from 'discord.js';
 const client = new discordJs.Client();
 
-const TOKEN = 'MTEzMjIzNTEyMjg2Mzc2NzYyMw.G330_L.SxtQ9pEjaxBB7eYxmGldfY7JqA50nTDlL6H0jw';
+const TOKEN = 'empty';
 
 client.once('ready', () => {
   console.log('Elixe is online!');
