@@ -1,10 +1,12 @@
+require('dotenv').config();
+
 // Function to handle the search request
 function search() {
   var searchQuery = document.getElementById('searchInput').value;
 
   // Make a GET request to the Google Search API
  // Replace "YOUR_API_KEY" to your actual Google Search API key
-  fetch(`https://www.googleapis.com/customsearch/v1?key={GOOGLE_API_KEY}&cx={GOOGLE_API_ENGINE}&q=${searchQuery}`)
+  fetch(`https://www.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_API_KEY}&cx=${process.env.GOOGLE_API_ENGINE}&q=${searchQuery}`)
     .then(response => response.json())
     .then(data => {
       // Process the API response and display the search results
@@ -21,7 +23,7 @@ function viewImages() {
   var searchQuery = document.getElementById('searchInput').value;
 
   // Make a GET request to the Google Search API with searchType set to "image"
-  fetch(`https://www.googleapis.com/customsearch/v1?key={GOOGLE_API_KEY}&cx={GOOGLE_API_ENGINE}&q=${searchQuery}&searchType=image`)
+  fetch(`https://www.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_API_KEY}&cx=${process.env.GOOGLE_API_ENGINE}&q=${searchQuery}&searchType=image`)
     .then(response => response.json())
     .then(data => {
       // Process the API response and display the image results
@@ -37,14 +39,14 @@ function viewImages() {
 function viewVideos() {
   var searchQuery = document.getElementById('searchInput').value;
 
-  fetch('https://www.googleapis.com/customsearch/v1?key={GOOGLE_API_KEY}&cx={GOOGLE_API_ENGINE}&q=${searchQuery}&searchType=video')
+  fetch(`https://www.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_API_KEY}&cx=${process.env.GOOGLE_API_ENGINE}&q=${searchQuery}&searchType=video`)
   .then(response => response.json())
   .then(data => {
     displayVideoResults(data);
   });
 
   // Make a GET request to the YouTube Data API to fetch video search results
-  fetch(`https://www.googleapis.com/youtube/v3/search?key={YOUTUBE_API_KEY}&q=${searchQuery}&part=snippet&type=video`)
+  fetch(`https://www.googleapis.com/youtube/v3/search?key=${process.env.YOUTUBE_API_KEY}&q=${searchQuery}&part=snippet&type=video`)
     .then(response => response.json())
     .then(data => {
       // Process the API response and display the video results
