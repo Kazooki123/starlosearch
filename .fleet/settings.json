@@ -1,0 +1,8 @@
+{
+    "toolchains": [
+        {
+            "name": "Rust",
+            "path": "\\\\wsl.localhost\\Ubuntu-22.04\\root\\.rustup\\toolchains\\stable-x86_64-unknown-linux-gnu"
+        },
+    ],
+}
