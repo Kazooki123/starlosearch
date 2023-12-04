@@ -34,14 +34,6 @@ Start the development server: npm run start.
 
 Open your web browser and go to http://localhost:3000 to access the search engine.
 
-Technologies Used
-StarloSearch is built using the following technologies:
-
-HTML5, CSS3, and JavaScript for the frontend.
-Node.js and Express.js for the backend server.
-Redis for caching and data storage.
-TensorFlow.js for advanced search algorithms.
-Svelte for building the user interface.
 Contributing
 We welcome contributions from the community! If you'd like to contribute to StarloSearch, please follow our Contribution Guidelines for more details.
 
@@ -80,13 +72,7 @@ On Windows:
 venv\Scripts\activate
 ```
 
-# Step 3: Install Dependencies (Optional)
-If you set up a virtual environment, with it activated, install the required Python dependencies:
-```python
-pip install -r requirements.txt
-```
-
-Step 4: Run the Search Engine
+Step 3: Run the Search Engine
 In the terminal, navigate to the project folder where your index.html, style.css, and script.js files are located.
 Use a local server to run the Search Engine. You can use the http-server package, which is easy to set up:
 If you don't have http-server installed, you can install it globally using npm:
@@ -99,9 +85,9 @@ Start the server:
 http-server
 ```
 
-3.Once the server is running, open your web browser.
+4.Once the server is running, open your web browser.
 
-4.Go to `http://localhost:8080` or the appropriate address displayed in the terminal.
+5.Go to `http://localhost:8080` or the appropriate address displayed in the terminal.
 That's it! You have successfully set up and run your Search Engine project using HTML, CSS, and JavaScript. Happy coding! 😊🚀
 
 # License
@@ -128,7 +114,7 @@ Emails: mgamerdinge146@gmail.com, markanthonygelito@gmail.com
 Twitter: @Mr_Unknown157
 
 # Acknowledgments
-Special thanks to StarloExoliz, The developer of this project
+Special thanks to StarloExoliz, The developer of this project and all the contributers!!
 ### Inspired by:
 
 -Google
