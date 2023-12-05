@@ -217,46 +217,6 @@
         const closeButton = document.getElementById('closeButton');
         closeButton.addEventListener('click', closeChatbot);
       </script>
-      <script>
-        fetch('src/Php/server.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                action: 'login',
-                username: 'myUsername',
-                password: 'myPassword'
-            })
-        })
-        .then(response => response.json())
-        .then(data => {
-
-        })
-        .catch(error => {
-            
-        });
-      </script>
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-      <script>
-        $(document).ready(function () {
-          $("#searchButton").click(function () {
-            var searchQuery = $("#searchInput").val();
-
-            $.ajax({
-              url: "/get_search_results",
-              method: "POST",
-              data: { query: searchQuery },
-              success: function (data) {
-                $("#searchResults").html(data);
-              },
-              error: function (error) {
-                console.error("Error:", error);
-              },
-            });
-          });
-        });
-      </script>
     </header>
   </body>
 </html>
