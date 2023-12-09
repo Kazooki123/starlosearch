@@ -43,6 +43,8 @@ body {
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
+    outline: none;
+    border: none;
   }
   
   #searchInput {
