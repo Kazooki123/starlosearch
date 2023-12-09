@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,212 +11,213 @@
     <link rel="stylesheet" href="Assets/css/navbar.css">
     <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css">
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
-  </head>
-  <body>
-    <header>
-      <header class="header">
-         <div class="navbar">
-           <input type="checkbox" id="menu" hidden />
-           <label for="menu">
-             <i class="fa-solid fa-bars"></i>
-             <i class="fa-solid fa-xmark"></i>
-           </label>
-           <div class="logo">
-             <h1>StarloSearch</h1>
-           </div>
-           <nav>
-             <ul>
-               <a href="index.html">
-                <i class="fa-solid fa-house fa-fade"></i>
-               </a>
-               <a href="Pages/login.html">
-                <i class="fa-solid fa-user"></i>
-               </a>
-               <a href="Pages/products.html">
-                <i class="fa-solid fa-shop"></i>
-               </a>
-               <a href="Pages/history.html">
-                <i class="fa-solid fa-clock-rotate-left"></i>
-               </a>
-               <a href="Pages/about.html">
-                <i class="fa-solid fa-circle-question"></i>
-               </a>
-               <a href="Pages/Payment/checkout.html">
-                <i class="fa-solid fa-star" style="color: #eb242e;"></i>
-               </a>
-             </ul>
-           </nav>
-         </div>
-      </header>
+</head>
+<body>
+<header>
+    <header class="header">
+        <div class="navbar">
+            <input type="checkbox" id="menu" hidden/>
+            <label for="menu">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-xmark"></i>
+            </label>
+            <div class="logo">
+                <h1>StarloSearch</h1>
+            </div>
+            <nav>
+                <ul>
+                    <a href="index.html">
+                        <i class="fa-solid fa-house fa-fade"></i>
+                    </a>
+                    <a href="Pages/login.html">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                    <a href="Pages/products.html">
+                        <i class="fa-solid fa-shop"></i>
+                    </a>
+                    <a href="Pages/history.html">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                    </a>
+                    <a href="Pages/about.html">
+                        <i class="fa-solid fa-circle-question"></i>
+                    </a>
+                    <a href="Pages/Payment/checkout.html">
+                        <i class="fa-solid fa-star" style="color: #eb242e;"></i>
+                    </a>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-      <!-- This is the container where the content of search-result.html will be loaded -->
-      <div id="mainContent">
+    <!-- This is the container where the content of search-result.html will be loaded -->
+    <div id="mainContent">
         <!-- Your default content goes here -->
         <h1>Welcome to My Search Engine</h1>
-        <p>Click the Search button to go to the search result page. DUE TO AN ERROR, STARLOSEARCH CAN'T SHOW RESULTS FOR NOW. Thank you for your patience!</p>
-      </div>
+        <p>Click the Search button to go to the search result page.</p>
+    </div>
 
-      <!-- Add a button to navigate to the search-result.html page -->
-      <!-- <button onclick="loadSearchResultPage()">Go to Search Result</button> -->
+    <!-- Add a button to navigate to the search-result.html page -->
+    <!-- <button onclick="loadSearchResultPage()">Go to Search Result</button> -->
 
-      <!-- Search Bar -->
-      <div id="searchBar">
+    <!-- Search Bar -->
+    <div id="searchBar">
         <div class="autocomplete">
-          <input
-            type="text"
-            id="searchInput"
-            placeholder="Enter your search query"
-          />
-          <div id="autocompleteItems" class="autocomplete-items"></div>
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Enter your search query"
+            />
+            <div id="autocompleteItems" class="autocomplete-items"></div>
         </div>
         <button onclick="search()">
-          <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
         </button>
         <button onclick="viewImages()">
-          <i class="fa-solid fa-image"></i>
+            <i class="fa-solid fa-image"></i>
         </button>
         <button onclick="viewVideos()">
-          <i class="fa-solid fa-video"></i>
+            <i class="fa-solid fa-video"></i>
         </button>
         <div>
-          <a href="Pages/starlo_translate.html">
-            <button>
-              <i class="fa-solid fa-language"></i>
-            </button>
-          </a>
+            <a href="Pages/starlo_translate.html">
+                <button>
+                    <i class="fa-solid fa-language"></i>
+                </button>
+            </a>
         </div>
         <div>
-          <a href="https://open.spotify.com/?">
-            <button>
-              <i class="fa-brands fa-spotify" style="color: #000000;"></i>
-            </button>
-          </a>
+            <a href="https://open.spotify.com/?">
+                <button>
+                    <i class="fa-brands fa-spotify" style="color: #000000;"></i>
+                </button>
+            </a>
         </div>
         <button onclick="darkMode()">
-          <i class="fa-solid fa-moon"></i>
+            <i class="fa-solid fa-moon"></i>
         </button>
-      </div>
+    </div>
 
-      <!-- Search Results -->
-      <div id="searchResults"></div>
+    <!-- Search Results -->
+    <div id="searchResults"></div>
 
-      <!-- Video Container -->
-      <div class="video-container">
+    <!-- Video Container -->
+    <div class="video-container">
         <div id="videoPlayer"></div>
-      </div>
+    </div>
 
-      <!-- Chatbot Button -->
-      <button id="chatbotButton" onclick="openChatbot()">Chatbot</button>
+    <!-- Chatbot Button -->
+    <button id="chatbotButton" onclick="openChatbot()">Chatbot</button>
 
-      <!-- Chatbot Area -->
-      <div id="chatbotContainer" style="display: none">
+    <!-- Chatbot Area -->
+    <div id="chatbotContainer" style="display: none">
         <div id="chatbotHeader">
-          <h2>Chatbot</h2>
-          <button onclick="closeChatbot()">
-            <i class="fa-solid fa-xmark"></i>
-          </button>
+            <h2>Chatbot</h2>
+            <button onclick="closeChatbot()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
         </div>
         <div id="chatbox">
-          <div id="chatbotMessages"></div>
-          <div id="userInput">
-            <input
-              type="text"
-              id="userMessage"
-              placeholder="Type your message here"
-            />
-            <button onclick="sendMessage()">
-              <i class="fa-solid fa-comment"></i>
-            </button>
-          </div>
+            <div id="chatbotMessages"></div>
+            <div id="userInput">
+                <input
+                    type="text"
+                    id="userMessage"
+                    placeholder="Type your message here"
+                />
+                <button onclick="sendMessage()">
+                    <i class="fa-solid fa-comment"></i>
+                </button>
+            </div>
         </div>
-      </div>
+    </div>
 
-      <!-- MIC BUTTON -->
-      <div class="mic-icon" onclick="startVoiceSearch()"></div>
+    <!-- MIC BUTTON -->
+    <div class="mic-icon" onclick="startVoiceSearch()"></div>
 
-      <!-- Microphone button - Bottom left -->
-      <div class="microphone-button bottom-left">
+    <!-- Microphone button - Bottom left -->
+    <div class="microphone-button bottom-left">
         <button class="microphone-icon" onclick="startMusicRecognition()">
-          <i class="fa-solid fa-microphone"></i>
+            <i class="fa-solid fa-microphone"></i>
         </button>
-      </div>
+    </div>
 
-      <!-- JavaScript Libraries -->
-      <script src="https://kit.fontawesome.com/1a44a648d1.js" crossorigin="anonymous"></script>
-      <script src="src/Javascript/script.cjs"></script>
-      <script src="src/Javascript/logging.mjs"></script>
-      <script src="src/Javascript/discordbot.js"></script>
-      <script src="src/Javascript/speak.js"></script>
-      <script src="src/Javascript/music_search.js"></script>
-      <script src="src/Javascript/autocomplete.js"></script>
-      <script src="src/Javascript/searchhistory.js"></script>
-      <script src="src/Javascript/Logs/audit-logs.js"></script>
-      <script type="module" src="src/Javascript/elixe.mjs"></script>
-      <script src="src/Javascript/searchresult.js"></script>
-      <script src="src/Javascript/Events/notifications.js"></script>
-      <script src="src/Javascript/Security/log_signal.js"></script>
-      <script src="src/Javascript/A.I/response.js"></script>
-      <script type="module" src="src/Javascript/Database/mysql.js"></script>
-      <script type="module" src="src/Javascript/Database/mongodb.js"></script>
-      <script type="module" src="src/Javascript/Database/http_request.js"></script>
-      <script type="module" src="src/Javascript/login.mjs"></script>
-      <script>
+    <!-- JavaScript Libraries -->
+    <script src="https://kit.fontawesome.com/1a44a648d1.js" crossorigin="anonymous"></script>
+    <script src="src/Javascript/script.cjs"></script>
+    <script src="src/Javascript/logging.mjs"></script>
+    <script src="src/Javascript/discordbot.js"></script>
+    <script src="src/Javascript/speak.js"></script>
+    <script src="src/Javascript/music_search.js"></script>
+    <script src="src/Javascript/autocomplete.js"></script>
+    <script src="src/Javascript/searchhistory.js"></script>
+    <script src="src/Javascript/Logs/audit-logs.js"></script>
+    <script type="module" src="src/Javascript/elixe.mjs"></script>
+    <script src="src/Javascript/searchresult.js"></script>
+    <script src="src/Javascript/Events/notifications.js"></script>
+    <script src="src/Javascript/Security/log_signal.js"></script>
+    <script src="src/Javascript/A.I/response.js"></script>
+    <script type="module" src="src/Javascript/Database/mysql.js"></script>
+    <script type="module" src="src/Javascript/Database/mongodb.js"></script>
+    <script type="module" src="src/Javascript/Database/http_request.js"></script>
+    <script type="module" src="src/Javascript/login.mjs"></script>
+    <script>
         const checkbox = document.getElementById('checkbox');
 
         checkbox.addEventListener('change', () => {
             document.body.classList.toggle('dark');
         });
-      </script>
-      <script>
+    </script>
+    <script>
         function darkMode() {
-           var element = document.body;
-           element.classList.toggle("dark-mode");
+            var element = document.body;
+            element.classList.toggle("dark-mode");
         }
-      </script>  
-      <script>
+    </script>
+    <script>
         function openChatbot() {
-          chatbotContainer.style.display = "block";
+            chatbotContainer.style.display = "block";
         }
-        
+
         function displayMessage(message, isBot = false) {
-          const messageDiv = document.createElement("div");
-          messageDiv.className = isBot ? "bot-message" : "user-message";
-          messageDiv.textContent = message;
-          chatbotMessages.appendChild(messageDiv);
+            const messageDiv = document.createElement("div");
+            messageDiv.className = isBot ? "bot-message" : "user-message";
+            messageDiv.textContent = message;
+            chatbotMessages.appendChild(messageDiv);
         }
 
         function sendMessage() {
-          const userMessage = document.getElementById('userMessage').value;
-          const chabotMessages = document.getElementById('chatbotMessages'); 
+            const userMessage = document.getElementById('userMessage').value;
+            const chabotMessages = document.getElementById('chatbotMessages');
 
-          chatbotMessages.innerHTML += '<div>User: ' + userMessage + '</div>';
+            chatbotMessages.innerHTML += '<div>User: ' + userMessage + '</div>';
 
-          const chatbotResponse = 'Hello, I am SpaceAI!';
+            const chatbotResponse = 'Hello, I am SpaceAI!';
 
-          chatbotMessages.innerHTML += '<div>Bot: ' + chatbotResponse + '</div>';
+            chatbotMessages.innerHTML += '<div>Bot: ' + chatbotResponse + '</div>';
 
-          document.getElementById('userMessage').value = '';
+            document.getElementById('userMessage').value = '';
         }
 
         function handleUserMessage(message) {
-          if (message.toLowerCase().includes("hello")) {
-            displayMessage("Hello! How can I assist you today?", true);
-          } else if (message.toLowerCase().includes("goodbye")) {
-            displayMessage("Goodbye! Have a great day!", true);
-          } else {
-            displayMessage("I'm sorry, I don't understand that request.", true);
-          }
+            if (message.toLowerCase().includes("hello")) {
+                displayMessage("Hello! How can I assist you today?", true);
+            } else if (message.toLowerCase().includes("goodbye")) {
+                displayMessage("Goodbye! Have a great day!", true);
+            } else {
+                displayMessage("I'm sorry, I don't understand that request.", true);
+            }
         }
 
 
-      </script>
-      <script>
+    </script>
+    <script>
         function closeChatbot() {
-          chatbotContainer.style.display = 'none';
+            chatbotContainer.style.display = 'none';
         }
+
         const closeButton = document.getElementById('closeButton');
         closeButton.addEventListener('click', closeChatbot);
-      </script>
-    </header>
-  </body>
+    </script>
+</header>
+</body>
 </html>
