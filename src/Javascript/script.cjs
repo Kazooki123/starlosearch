@@ -73,19 +73,3 @@ function sendImageRecognitionRequest(urls) {
       console.error('Error:', error);
     });
 }
-
-// Example usage:
-var imageUrls = ['jhs:///'];
-sendImageRecognitionRequest(imageUrls);
-
-// Function to perform image recognition using TensorFlow.js
-async function performImageRecognition(imageUrl) {
-  const model = await mobilenet.load();
-  const img = document.createElement("img");
-  img.src = imageUrl;
-  img.onload = async () => {
-    const predictions = await model.classify(img);
-    console.log(predictions);
-    // You can display the image recognition results in the console or elsewhere in your UI
-  };
-}
