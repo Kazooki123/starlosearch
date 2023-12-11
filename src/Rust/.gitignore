@@ -3,3 +3,5 @@ target/
 compiler/
 lib/
 .env
+Cargo.toml
+Cargo.lock
