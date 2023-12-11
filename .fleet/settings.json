@@ -6,5 +6,23 @@
         },
     ],
     "nodejs.typescript.rebuildOnChanges": true,
-    "nodejs.typescript.node.options": "tsconfig.json"
+    "nodejs.typescript.node.options": "tsconfig.json",
+    "plugins": [
+        {
+            "type": "add",
+            "pluginName": "fleet.ssh"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.space"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.wsl"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.smartMode"
+        }
+    ]
 }
