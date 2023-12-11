@@ -1,4 +1,10 @@
 {
+  "name": "starlosearch",
+  "version": "1.0.0",
+  "description": "search engine of the future",
+  "private": true,
+  "type": "module",
+  "author": "kazooki",
   "dependencies": {
     "@algolia/autocomplete-js": "^1.11.0",
     "@google-cloud/vision": "^4.0.1",
