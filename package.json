@@ -3,6 +3,7 @@
     "@algolia/autocomplete-js": "^1.11.0",
     "@google-cloud/vision": "^4.0.1",
     "@tensorflow/tfjs": "^4.10.0",
+    "@vercel/speed-insights": "^1.0.1",
     "algoliasearch": "^4.19.1",
     "css.gg": "^2.1.1",
     "dotenv": "^16.3.1",
@@ -11,6 +12,7 @@
     "util": "^0.12.5"
   },
   "devDependencies": {
+    "typescript": "^5.3.3",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
   }
