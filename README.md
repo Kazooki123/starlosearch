@@ -10,6 +10,10 @@ StarloSearch is a modern and efficient search engine designed to provide users w
 
 StarloSearch is on Development meaning new features or machine learning will come. Algorithm, Sorting, Query systems are still on development, If you wanna help please contact mgamerdinge@gmail.com for information. I would appreciate if you want to help this project! 
 
+# Visit it now!
+
+Link🔗: https://starlosearch.vercel.app/
+
 # Features
 Fast and Responsive: StarloSearch is built for speed, delivering search results in the blink of an eye.
 
@@ -36,59 +40,6 @@ Open your web browser and go to http://localhost:3000 to access the search engin
 
 Contributing
 We welcome contributions from the community! If you'd like to contribute to StarloSearch, please follow our Contribution Guidelines for more details.
-
-# Tutorial
-To get started with your Search Engine project, follow these steps to install the necessary extensions and dependencies:
-
-# Step 1: Clone the Repository
-Open your terminal or command prompt.
-Change the current working directory to the location where you want to clone the Search Engine project.
-Use the following command to clone the repository:
-bash
-```shell
-git clone https://github.com/Kazooki123/starlosearch.git
-```
-
-# Step 2: Set Up Virtual Environment (Optional)
-If you plan to use the Python portion of the project, you can set up a virtual environment to manage dependencies:
- Change the directory to the project folder:
-```bash
-cd search-engine
-```
-
-Create a virtual environment:
-```python
-python -m venv venv
-```
-
-Activate the virtual environment:
- On macOS/Linux:
-```bash
-source venv/bin/activate
-```
-
-On Windows:
-```bash
-venv\Scripts\activate
-```
-
-Step 3: Run the Search Engine
-In the terminal, navigate to the project folder where your index.html, style.css, and script.js files are located.
-Use a local server to run the Search Engine. You can use the http-server package, which is easy to set up:
-If you don't have http-server installed, you can install it globally using npm:
-```bash
-npm install -g http-server
-```
-
-Start the server:
-```bash
-http-server
-```
-
-4.Once the server is running, open your web browser.
-
-5.Go to `http://localhost:8080` or the appropriate address displayed in the terminal.
-That's it! You have successfully set up and run your Search Engine project using HTML, CSS, and JavaScript. Happy coding! 😊🚀
 
 # License
 StarloSearch is licensed under the MIT License. See LICENSE for more information.
