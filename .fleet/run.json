@@ -1,0 +1,73 @@
+{
+    "configurations": [
+        {
+            "type": "go",
+            "name": "Go configuration",
+            "goExecPath": "",
+            "buildParams": [],
+        },
+        {
+            "type": "node",
+            "name": "Node.js configuration",
+            "file": "",
+        },
+        {
+            "type": "cargo",
+            "name": "Cargo configuration",
+        },
+        {
+            "type": "npm",
+            "name": "npm configuration",
+            "command": "run",
+            "scripts": "",
+        },
+        {
+            "type": "go-test",
+            "name": "Go-test configuration",
+            "goExecPath": "~/",
+            "buildParams": [],
+        },
+        {
+            "type": "django",
+            "name": "Django configuration",
+            "command": "runserver",
+            "manageFilePath": "$FILE$",
+        },
+        {
+            "type": "maven",
+            "name": "Maven configuration",
+            "tasks": [],
+        },
+        {
+            "type": "php",
+            "name": "Php configuration",
+        },
+        {
+            "type": "flask",
+            "name": "Flask configuration",
+        },
+        {
+            "type": "fastapi",
+            "name": "Fastapi configuration",
+            "module": "",
+            "application": "",
+        },
+        {
+            "type": "gradle",
+            "name": "Gradle configuration",
+            "tasks": [],
+        },
+        {
+            "type": "maven-run",
+            "name": "Maven-run configuration",
+            "mainClass": "",
+        },
+        {
+            "type": "python",
+            "name": "Python configuration",
+            "file": "$FILE$",
+            "arguments": [],
+        },
+        
+    ]
+}
