@@ -23,6 +23,11 @@
         {
             "type": "add",
             "pluginName": "fleet.smartMode"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.rust"
         }
-    ]
+    ],
+    "run.destination.stop.already.running": "Always"
 }

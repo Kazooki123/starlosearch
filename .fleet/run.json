@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "type": "go",
+            "name": "Go configuration",
+            "goExecPath": "",
+            "buildParams": [],
+        },
+        {
+            "type": "node",
+            "name": "Node.js configuration",
+            "file": "",
+        },
+        {
+            "type": "cargo",
+            "name": "Cargo configuration",
+        },
+        
+    ]
+}

@@ -11,6 +11,7 @@
     "@tensorflow/tfjs": "^4.10.0",
     "@vercel/speed-insights": "^1.0.1",
     "algoliasearch": "^4.19.1",
+    "appwrite": "^13.0.1",
     "css.gg": "^2.1.1",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
