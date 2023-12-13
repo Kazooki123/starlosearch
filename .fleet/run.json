@@ -15,6 +15,7 @@
             "type": "cargo",
             "name": "Cargo configuration",
         },
+<<<<<<< HEAD
         {
             "type": "npm",
             "name": "npm configuration",
@@ -68,6 +69,8 @@
             "file": "$FILE$",
             "arguments": [],
         },
+=======
+>>>>>>> b540ae39254c0be9edcb885bd7dfff5a311807f2
         
     ]
 }
