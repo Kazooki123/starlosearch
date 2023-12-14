@@ -18,15 +18,99 @@
         },
         {
             "type": "add",
-            "pluginName": "fleet.wsl"
-        },
-        {
-            "type": "add",
             "pluginName": "fleet.smartMode"
         },
         {
             "type": "add",
             "pluginName": "fleet.rust"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.kotlin"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.log"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.image.view"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.xml"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.git.frontend"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.emmet"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.go"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.gradle"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.language.cpp"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.ai"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.amper"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.dotnet"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.wsl"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.dap"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.docker"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.groovy"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.javascript"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.mercury"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.network"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.selfprofiling"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.spring.boot"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.terraform"
         }
     ],
     "run.destination.stop.already.running": "Always"

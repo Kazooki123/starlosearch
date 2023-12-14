@@ -15,7 +15,6 @@
             "type": "cargo",
             "name": "Cargo configuration",
         },
-<<<<<<< HEAD
         {
             "type": "npm",
             "name": "npm configuration",
@@ -25,7 +24,7 @@
         {
             "type": "go-test",
             "name": "Go-test configuration",
-            "goExecPath": "~/",
+            "goExecPath": "src/Api/api_key_generator.go",
             "buildParams": [],
         },
         {
@@ -69,8 +68,44 @@
             "file": "$FILE$",
             "arguments": [],
         },
-=======
->>>>>>> b540ae39254c0be9edcb885bd7dfff5a311807f2
-        
+        {
+            "type": "android-app",
+            "name": "Android-app configuration",
+            "module": "",
+            "destination": "",
+        },
+        {
+            "type": "xcode-app",
+            "name": "Xcode-app configuration",
+            "buildTarget": {
+                "project": "",
+                "target": "",
+            },
+            "configuration": "",
+            "destination": "",
+        },
+        {
+            "type": "xcode-test",
+            "name": "Xcode-test configuration",
+            "buildTarget": {
+                "project": "",
+                "target": "",
+            },
+            "configuration": "",
+            "destination": "",
+        },
+        {
+            "type": "python-tests",
+            "name": "Python-tests configuration",
+            "testFramework": "unittest",
+            "targets": [],
+        },
+        {
+            "type": "dotnet",
+            "name": "Dotnet configuration",
+            "projectPath": "~/",
+            "args": [],
+        },
+
     ]
 }
