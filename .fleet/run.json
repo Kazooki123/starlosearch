@@ -68,6 +68,7 @@
             "file": "$FILE$",
             "arguments": [],
         },
+<<<<<<< HEAD
         {
             "type": "android-app",
             "name": "Android-app configuration",
@@ -107,5 +108,8 @@
             "args": [],
         },
 
+=======
+        
+>>>>>>> 33071bda8bfe3afc8d7db566e552a775fa8f7d04
     ]
 }
