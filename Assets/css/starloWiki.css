@@ -15,7 +15,7 @@ body {
 }
 
 .header {
-    background-color: #fff;
+    background-color: #171716;
     padding: 10px;
     text-align: center;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
@@ -68,7 +68,7 @@ body {
     top: 20px;
     left: 20px;
     z-index: 999;
-    color:
+    color: #171716;
 }
 
 .toggle-button .checkbox {
