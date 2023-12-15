@@ -70,9 +70,12 @@ body {
     z-index: 999;
 }
 
+.toggle-button .checkbox {
+    display: none; /* Hide the checkbox element */
+}
+
 .toggle-button .checkbox:checked + .label .ball {
     transform: translateX(24px);
-    display: none;
 }
 
 .toggle-button .label {
