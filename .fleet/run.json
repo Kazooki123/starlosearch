@@ -68,7 +68,6 @@
             "file": "$FILE$",
             "arguments": [],
         },
-<<<<<<< HEAD
         {
             "type": "android-app",
             "name": "Android-app configuration",
@@ -107,9 +106,10 @@
             "projectPath": "~/",
             "args": [],
         },
+        {
+            "type": "dotnet-test-experimental",
+            "name": "Dotnet-test-experimental configuration",
+        },
 
-=======
-        
->>>>>>> 33071bda8bfe3afc8d7db566e552a775fa8f7d04
     ]
 }
