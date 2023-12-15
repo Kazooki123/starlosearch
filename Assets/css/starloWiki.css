@@ -1,10 +1,10 @@
 /* starloWiki.css */
 
 :root {
-    --background-color: #fff;
+    --background-color: #171716;
     --text-color: #333;
-    --logo-color: #a7d7f9;
-    --toggle-color: #a7d7f9;
+    --logo-color: #81bce3;
+    --toggle-color: #000000;
 }
 
 body {
@@ -68,6 +68,7 @@ body {
     top: 20px;
     left: 20px;
     z-index: 999;
+    color:
 }
 
 .toggle-button .checkbox {
