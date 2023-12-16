@@ -113,5 +113,7 @@
             "pluginName": "fleet.terraform"
         }
     ],
-    "run.destination.stop.already.running": "Always"
+    "run.destination.stop.already.running": "Always",
+    "autoSave": "AfterDelay",
+    "excluded": []
 }
