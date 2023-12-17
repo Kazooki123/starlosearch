@@ -1,0 +1,5 @@
+nsfw/
+sfw/
+test/
+resnet18-f37072fd.pth
+resnet50-0676ba61.pth
