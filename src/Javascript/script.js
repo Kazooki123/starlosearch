@@ -31,9 +31,41 @@ appwrite.functions.getEnvironmentVariables()
         });
         addHistoryItem(searchQuery);
     }
+    
+    // Function to handle the image button click
+    function viewImages() {
+    var searchQuery = document.getElementById('searchInput').value;
 
-    // The rest of your code ...
-  })
+    // Make a GET request to the Google Search API with searchType set to "image"
+    fetch(`https://www.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_API_KEY}&cx=${process.env.GOOGLE_API_ENGINE}&q=${searchQuery}&searchType=image`)
+      .then(response => response.json())
+      .then(data => {
+        // Process the API response and display the image results
+        displayImageResults(data);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+      addHistoryItem(searchQuery);
+  }
+    // Function to handle the video button click
+    function viewVideos() {
+    var searchQuery = document.getElementById('searchInput').value;
+
+    fetch(`https://www.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_API_KEY}&cx=${process.env.GOOGLE_API_ENGINE}&q=${searchQuery}&searchType=video`)
+      .then(response => response.json())
+      .then(data => {
+      displayVideoResults(data);
+    });
+
+    // Make a GET request to the YouTube Data API to fetch video search results
+    fetch(`https://www.googleapis.com/youtube/v3/search?key=${process.env.YOUTUBE_API_KEY}&q=${searchQuery}&part=snippet&type=video`)
+      .then(response => response.json())
+      .then(data => {
+      // Process the API response and display the video results
+      displayVideoResults(data);
+      })
+})
   .catch(function (error) {
     // Handle any errors
     console.error(error);
