@@ -49,4 +49,5 @@ function viewVideos() {
        .catch(error => {
          console.error('Error:', error);
        });
+  addHistoryItem(searchQuery);
 }
