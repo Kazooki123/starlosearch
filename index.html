@@ -150,6 +150,15 @@
             document.body.classList.toggle('dark');
         });
     </script>
+    <script type="module">
+        // Import the script.js functions
+        import {search, viewImages, viewVideos} from 'src/Javascript/script.js';
+
+        search();
+        viewVideos()
+        viewImages()
+    </script>
+
     <script>
         function darkMode() {
             var element = document.body;
