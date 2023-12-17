@@ -18,7 +18,7 @@ appwrite.functions.getEnvironmentVariables()
     const YOUTUBE_API_KEY = response['YOUTUBE_API_KEY'];
 
     // Use the local variables in your search function
-    function search() {
+    export function search() {
       var searchQuery = document.getElementById('searchInput').value;
       
       fetch(`https://www.googleapis.com/customsearch/v1?key=${GOOGLE_API_KEY}&cx=${GOOGLE_API_ENGINE}&q=${searchQuery}`)
@@ -33,7 +33,7 @@ appwrite.functions.getEnvironmentVariables()
     }
     
     // Function to handle the image button click
-    function viewImages() {
+    export function viewImages() {
     var searchQuery = document.getElementById('searchInput').value;
 
     // Make a GET request to the Google Search API with searchType set to "image"
@@ -49,7 +49,7 @@ appwrite.functions.getEnvironmentVariables()
       addHistoryItem(searchQuery);
   }
     // Function to handle the video button click
-    function viewVideos() {
+    export function viewVideos() {
     var searchQuery = document.getElementById('searchInput').value;
 
     fetch(`https://www.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_API_KEY}&cx=${process.env.GOOGLE_API_ENGINE}&q=${searchQuery}&searchType=video`)
