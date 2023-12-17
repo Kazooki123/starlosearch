@@ -129,7 +129,7 @@
 
     <!-- JavaScript Libraries -->
     <script src="https://kit.fontawesome.com/1a44a648d1.js" crossorigin="anonymous"></script>
-    <script type="module" src="./src/Javascript/script.js"></script>
+    <script src="./src/Javascript/script.js"></script>
     <script src="src/javascript/logging.mjs"></script>
     <script src="src/javascript/discordbot.js"></script>
     <script src="src/javascript/speak.js"></script>
@@ -150,15 +150,6 @@
             document.body.classList.toggle('dark');
         });
     </script>
-    <script type="module">
-        // Import the script.js functions
-        import {search, viewImages, viewVideos} from './src/Javascript/script.js';
-
-        search();
-        viewVideos();
-        viewImages();
-    </script>
-
     <script>
         function darkMode() {
             var element = document.body;
