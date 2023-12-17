@@ -115,5 +115,6 @@
     ],
     "run.destination.stop.already.running": "Always",
     "autoSave": "AfterDelay",
-    "excluded": []
+    "excluded": [],
+    "backend.maxHeapSizeMb": 1487
 }
