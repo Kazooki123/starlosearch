@@ -157,41 +157,49 @@
         }
     </script>
     <script>
-        function openChatbot() {
-            chatbotContainer.style.display = "block";
-        }
-
-        function displayMessage(message, isBot = false) {
-            const messageDiv = document.createElement("div");
-            messageDiv.className = isBot ? "bot-message" : "user-message";
-            messageDiv.textContent = message;
-            chatbotMessages.appendChild(messageDiv);
-        }
-
-        function sendMessage() {
-            const userMessage = document.getElementById('userMessage').value;
-            const chabotMessages = document.getElementById('chatbotMessages');
-
-            chatbotMessages.innerHTML += '<div>User: ' + userMessage + '</div>';
-
-            const chatbotResponse = 'Hello, I am SpaceAI!';
-
-            chatbotMessages.innerHTML += '<div>Bot: ' + chatbotResponse + '</div>';
-
-            document.getElementById('userMessage').value = '';
-        }
-
-        function handleUserMessage(message) {
-            if (message.toLowerCase().includes("hello")) {
-                displayMessage("Hello! How can I assist you today?", true);
-            } else if (message.toLowerCase().includes("goodbye")) {
-                displayMessage("Goodbye! Have a great day!", true);
-            } else {
-                displayMessage("I'm sorry, I don't understand that request.", true);
+            function openChatbot() {
+                chatbotContainer.style.display = "block";
             }
-        }
+
+            function displayMessage(message, isBot = false) {
+
+                const messageDiv = document.createElement("div");
+
+                messageDiv.className = isBot ? "bot-message" : "user-message";
+
+                messageDiv.textContent = message;
+
+                chatbotMessages.appendChild(messageDiv);
+            }
 
 
+            function sendMessage() {
+
+                const userMessage = document.getElementById('userMessage').value;
+
+                const chatbotMessages = document.getElementById('chatbotMessages');
+
+                displayMessage(userMessage);
+
+                const chatbotResponse = handleUserMessage(userMessage);
+
+                displayMessage(chatbotResponse, true);
+
+                document.getElementById('userMessage').value = '';
+            }
+
+            function handleUserMessage(message) {
+
+                message = message.toLowerCase();
+
+                if (message.includes("hello")) {
+                    return "Hello! How can I assist you today?";
+                } else if (message.includes("goodbye")) {
+                    return "Goodbye! Have a great day!";
+                } else {
+                    return "I'm sorry, I don't understand that request.";
+                }
+            }
     </script>
     <script>
         function closeChatbot() {
