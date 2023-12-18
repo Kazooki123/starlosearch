@@ -41,13 +41,13 @@ function viewVideos() {
 
   // Make a GET request to the YouTube Data API to fetch video search results
   fetch(`https://www.googleapis.com/youtube/v3/search?key=AIzaSyCgRiy4eJoesdaiAYjLDZD8iPO7O_q0aYM&q=${searchQuery}&part=snippet&type=video`)
-     .then(response => response.json())
-     .then(data => {
-       // Process the API response and display the video results
+    .then(response => response.json())
+    .then(data => {
+      // Process the API response and display the video results
        displayVideoResults(data);
-       })
-       .catch(error => {
-         console.error('Error:', error);
-       });
-       addHistoryItem(searchQuery);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+    addHistoryItem(searchQuery);
 }
