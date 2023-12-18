@@ -1,22 +1,38 @@
-# This is a test file. PLEASE DO NOT MODIFY IT
 # Import os, dotenv, and supabase modules
 import os
 from dotenv import load_dotenv
-import supabase # Import the module itself instead of specific objects
+from supabase import create_client, Client
 
 # Load the environment variables from the .env file
 load_dotenv()
 
 # Get the supabase URL and key from the environment variables
-url = os.getenv("SUPABASE_URL")
-key = os.getenv("SUPABASE_KEY")
+url: str = os.getenv("SUPABASE_URL")
+key: str = os.getenv("SUPABASE_KEY")
 
 # Create a supabase client object
-supabase_client = supabase.create_client(url, key) # Use the module name before the function name
+supabase: Client = create_client(url, key)
 
-# Use the supabase client to perform various operations on the database
-# For example, insert a new record into the countries table
-data = supabase_client.table("countries").insert({"name": "Poland"}).execute()
+# Define a function to sign up a new user with email and password
+def sign_up(email: str, password: str):
+    # Use the auth feature of the supabase client to sign up the user
+    user = supabase.auth.sign_up({"email": email, "password": password})
+    # Check if the sign up was successful
+    if user.error:
+        # Print the error message
+        print(user.error.message)
+    else:
+        # Print the user data
+        print(user.data)
 
-# Print the result
-print(data)
+# Define a function to sign in an existing user with email and password
+def sign_in(email: str, password: str):
+    # Use the auth feature of the supabase client to sign in the user
+    user = supabase.auth.sign_in_with_password({"email": email, "password": password})
+    # Check if the sign in was successful
+    if user.error:
+        # Print the error message
+        print(user.error.message)
+    else:
+        # Print the user data
+        print(user.data)
