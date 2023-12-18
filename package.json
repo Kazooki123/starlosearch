@@ -8,7 +8,8 @@
   "dependencies": {
     "@algolia/autocomplete-js": "^1.11.0",
     "@google-cloud/language": "^6.1.1",
-    "@google-cloud/vision": "^4.0.1",
+    "@google-cloud/translate": "^8.0.2",
+    "@google-cloud/vision": "^4.0.2",
     "@tensorflow/tfjs": "^4.10.0",
     "@vercel/speed-insights": "^1.0.1",
     "algoliasearch": "^4.19.1",
