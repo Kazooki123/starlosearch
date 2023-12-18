@@ -1,56 +1,37 @@
-import express from 'express'
-import { router } from 'express-file-routing' 
-import sqlite3 from 'sqlite3'
+import dotenv from "dotenv";
+dotenv.config();
 
-const app = express();
-const port = 5501;
+import { createClient } from "@supabase/supabase-js";
 
-const db = new sqlite3.Database('userslogin.db');
+const supabase_url = process.env.SUPABASE_URL;
+const supabase_key = process.env.SUPABASE_KEY;
 
-app.use(urlencoded({ extended: true }));
+// Create a supabase client object with your URL and key
+const supabase = createClient(supabase_url, supabase_key);
 
-app.post('/signup', (req, res) => {
-  const { username, password } = req.body;
+// Get the input elements from the HTML document
+const emailInput = document.querySelector('input[type="text"]');
+const passwordInput = document.querySelector('input[type="password"]');
+const submitButton = document.querySelector("a");
 
-  if (!username || !password) {
-    return res.status(400).send('Username and password are required');
-  }
+// Add a click event listener to the submit button
+submitButton.addEventListener("click", async () => {
+  // Get the email and password values from the input elements
+  const email = emailInput.value;
+  const password = passwordInput.value;
 
-  db.run('INSERT INTO users (username, password) VALUES (?, ?)', [username, password], (err) => {
-    if (err) {
-      return res.status(500).send('Error creating user.');
-    }
-    res.redirect('../index.html')
+  // Use the auth feature of the supabase client to sign in the user
+  const { user, error } = await supabase.auth.signIn({
+    email: email,
+    password: password,
   });
-});
 
-app.listen(port, () => {
-  console.log('Server is running on port ${port}');
-});
-
-// Client-side logic:
-
-document.querySelector('form').addEventListener('Submit', async (event) => {
-  event.preventDefault();
-
-  const username = document.querySelector('input[name="username"]').value;
-  const password = document.querySelector('input[name="password"]').value;
-
-  if (!username || !password) {
-    alert('Username and password are required');
+  // Check if the sign in was successful
+  if (error) {
+    // Print the error message
+    console.error(error.message);
   } else {
-    const response = await fetch('/signup', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ username, password}),
-    });
-
-    if (response.status === 200) {
-      window.location.href = 'index.html';
-    } else {
-      alert('Sign-up failed. Please try again.');
-    }
+    // Print the user data
+    console.log(user);
   }
 });
