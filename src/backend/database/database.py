@@ -1,3 +1,4 @@
+# This is a test file. PLEASE DO NOT MODIFY IT
 # Import os, dotenv, and supabase modules
 import os
 from dotenv import load_dotenv
@@ -15,7 +16,7 @@ supabase_client = supabase.create_client(url, key) # Use the module name before 
 
 # Use the supabase client to perform various operations on the database
 # For example, insert a new record into the countries table
-data = supabase_client.table("countries").insert({"name": "Philippines"}).execute()
+data = supabase_client.table("countries").insert({"name": "Poland"}).execute()
 
 # Print the result
 print(data)
