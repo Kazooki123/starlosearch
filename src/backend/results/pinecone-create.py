@@ -1,8 +1,11 @@
 import pinecone
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 # Replace with your actual Pinecone API key
-PINECONE_API_KEY = 'ba7dcc7d-fa51-4e00-af5a-81335e76be86'
-
+PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 # Initialize Pinecone client
 pinecone.init(PINECONE_API_KEY)
 
