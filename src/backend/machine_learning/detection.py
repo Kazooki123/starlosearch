@@ -3,6 +3,7 @@ import torch
 import torchvision
 import torchvision.transforms as transforms
 import os
+import torch.optim as optim
 
 # Define the image transformations
 transform = transforms.Compose(
@@ -19,8 +20,8 @@ state_dict = torch.load("resnet50-0676ba61.pth")
 # Load the state_dict into the model object
 model.load_state_dict(state_dict)
 
-# Set the model to evaluation mode
-model.eval()
+# Set the model to training mode
+model.train()
 
 # Define the classes
 classes = ("nsfw", "sfw")
@@ -36,3 +37,14 @@ for image in test_images: # loop over the images
     output = model(img) # pass the image through the model
     _, predicted = torch.max(output, 1) # get the index of the predicted class
     print(f"{image}: {classes[predicted]}") # print the image name and the predicted class
+
+# Define the loss function
+loss = torch.nn.CrossEntropyLoss()
+
+optimizer = optim.SGD(model.parameters(), lr=0.001)
+
+# Backpropagate the loss
+loss.backward()
+
+# Update the optimizer
+optimizer.step()
