@@ -1,10 +1,27 @@
 {
   "name": "starlosearch",
   "version": "1.0.0",
-  "description": "search engine of the future",
-  "private": true,
+  "description": "a fast and vast search engine. I'm just rhyming things okey?",
+  "main": "webpack.config.js",
   "type": "module",
-  "author": "kazooki",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kazooki123/starlosearch.git"
+  },
+  "keywords": [
+    "\"HTML\"",
+    "\"CSS\"",
+    "\"Javascript\"",
+    "\"Search",
+    "Engine\"",
+    "\"web",
+    "development\""
+  ],
+  "author": "Kazooki123",
+  "license": "MIT",
   "dependencies": {
     "@algolia/autocomplete-js": "^1.11.0",
     "@google-cloud/language": "^6.1.1",
@@ -37,5 +54,9 @@
     "typescript": "^5.3.3",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/Kazooki123/starlosearch/issues"
+  },
+  "homepage": "https://github.com/Kazooki123/starlosearch#readme"
 }
