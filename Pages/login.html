@@ -9,25 +9,19 @@
 <body>
     <div class="login-box">
         <h2>Login</h2>
-        <form>
+        <form action="https://hesfberwlucivtmpnlxc.supabase.co/rest/v1/users" method="POST">
             <div class="user-box">
-                <input type="text" name="" required="">
+                <input type="text" name="username" required="">
                 <label>Username</label>
             </div>
             <div class="user-box">
-                <input type="password" name="" required="">
+                <input type="password" name="password" required="">
                 <label>Password</label>
             </div>
-            <a href="../index.html">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                Submit
-            </a>
+            <input type="submit" value="Login">
         </form>
     </div>
-    
+
     <script type="module" src="../src/Javascript/login.mjs"></script>     
 </body>
 </html>
