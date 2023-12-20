@@ -6,6 +6,8 @@ cloud.google.com/go/compute/metadata v0.2.3/go.mod h1:VAV5nSsACxMJvgaAuX6Pk2Aawl
 cloud.google.com/go/trace v1.10.4 h1:2qOAuAzNezwW3QN+t41BtkDJOG42HywL73q8x/f6fnM=
 cloud.google.com/go/trace v1.10.4/go.mod h1:Nso99EDIK8Mj5/zmB+iGr9dosS/bzWCJ8wGmE6TXNWY=
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
+github.com/amikos-tech/chroma-go v0.0.0-20230901221218-d0087270239e h1:RYla80qSHCeP8WL9Hyjfuk9n/KkDcYwzfaYbfc4cqRQ=
+github.com/amikos-tech/chroma-go v0.0.0-20230901221218-d0087270239e/go.mod h1:bPy9xmWK59Ix/nteEqIvPfAI0L07di+uZMb+RiYbles=
 github.com/bytedance/sonic v1.5.0/go.mod h1:ED5hyg4y6t3/9Ku1R6dU/4KyJ48DZ4jPhfY1O2AihPM=
 github.com/bytedance/sonic v1.9.1 h1:6iJ6NqdoxCDr6mbY8h18oSO+cShGSMRGCEo7F2h0x8s=
 github.com/bytedance/sonic v1.9.1/go.mod h1:i736AoUSYt75HyZLoJW9ERYxcy6eaN6h4BZXU064P/U=
