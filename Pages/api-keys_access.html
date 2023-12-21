@@ -29,10 +29,10 @@
             fetch('http://localhost:8080/generate')
             .then(response => response.json())
             .then(data => {
-                apiKeyResult.innerHTML = `API Key: ${data.key}`;
+                apiKeyResult.textContent = `API Key: ${data.key}`;
             })
             .catch(error => {
-                apiKeyResult.innerHTML = error;
+                console.error(error);
             });
         });
     </script>
