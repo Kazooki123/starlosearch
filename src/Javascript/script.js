@@ -1,3 +1,6 @@
+import dotenv from 'dotenv'
+dotenv.config()
+
 function search() {
   var searchQuery = document.getElementById('searchInput').value;
 

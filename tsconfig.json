@@ -1,12 +1,18 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
-        "target": "es6",
-        "outDir": "./dist",
-        "rootDir": "./src",
-        "strict": true,
-        "moduleResolution": "node",
-        "esModuleInterop": true
+      "noEmit": true,
+      "module": "commonjs",
+      "target": "es6",
+      "allowJs": true,
+      "outDir": "./dist",
+      "rootDir": "./src",
+      "strict": true,
+      "moduleResolution": "node",
+      "esModuleInterop": true,
+      "paths": {
+        "src/*": ["./src/*"]
+      },
+      "types": ["jest"]
     },
     "include": [
         "src/**/*.ts"
