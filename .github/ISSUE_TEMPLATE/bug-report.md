@@ -1,9 +1,10 @@
-## Bug Report
+# Bug Report
 
 **Description**:
 A clear and concise description of what the bug is.
 
 **Steps to Reproduce**:
+
 1. Go to the folder or file that has the bug
 2. Click on any repositories that has the bug
 3. Scroll down till you see it

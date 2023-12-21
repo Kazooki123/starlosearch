@@ -1,4 +1,4 @@
-## Feature Request
+# Feature Request
 
 **Description**:
 A clear and concise description of the feature you'd like to see.
