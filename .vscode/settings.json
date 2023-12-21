@@ -13,5 +13,6 @@
     "supabase",
     "tfjs"
   ],
-  "mojo.modularHomePath": "\\\\wsl.localhost\\Ubuntu-22.04\\root\\.modular"
+  "mojo.modularHomePath": "\\\\wsl.localhost\\Ubuntu-22.04\\root\\.modular",
+  "git.enabled": true,
 }
