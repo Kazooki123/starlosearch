@@ -39,6 +39,7 @@
     "chromadb": "^1.7.2",
     "css.gg": "^2.1.1",
     "dotenv": "^16.3.1",
+    "drizzle-orm": "^0.29.1",
     "express": "^4.18.2",
     "firebase": "^10.7.1",
     "ioredis": "^5.3.2",
@@ -49,6 +50,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.4.1",
+    "drizzle-kit": "^0.20.7",
     "jest": "^29.7.0",
     "supabase": "^1.123.4",
     "typescript": "^5.3.3",
