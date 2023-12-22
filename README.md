@@ -6,7 +6,7 @@
 
 StarloSearch is a modern and efficient search engine designed to provide users with quick and accurate search results. Whether you're searching for websites, images, or videos, StarloSearch has got you covered. With its intuitive user interface and advanced search algorithms, finding the information you need has never been easier.
 
-[![Website](Images/Screenshot (67).png)(https://starlosearch.vercel.app)]
+[![Website](https://github.com/Kazooki123/starlosearch/blob/main/Images/Screenshot%20(67).png)(https://starlosearch.vercel.app)]
 
 # Before We Start
 
