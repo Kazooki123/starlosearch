@@ -67,7 +67,7 @@
             />
             <div id="autocompleteItems" class="autocomplete-items"></div>
         </div>
-        <button onclick= search()>
+        <button onclick="search()">
             <i class="fa-solid fa-magnifying-glass"></i>
         </button>
         <button onclick="viewImages()">
@@ -135,24 +135,12 @@
     <script src="src/frontend/searchhistory.js"></script>
     <script src="src/frontend/Logs/audit-logs.js"></script>
     <script type="module" src="src/frontend/elixe.mjs"></script>
-    <script type="module" src="src/frontend/searchresult.js"></script>
+    <script src="src/frontend/searchresult.js"></script>
     <script src="src/frontend/Events/notifications.js"></script>
     <script src="src/frontend/Security/log_signal.js"></script>
     <script src="src/frontend/chatbot/response.js"></script>
     <script src="src/frontend/chatbot/chatbot.js"></script>
-    <script type="module" src="src/frontend/script.js">
-        import {search, viewImages, viewVideos } from 'src/frontend/script.js';
-        import {containsNSFWKeywords, displaySearchResults, displayImageResults, displayVideoResults} from 'src/frontend/searchresult.js';
-
-        search();
-        viewImages();
-        viewVideos();
-
-        containsNSFWKeywords();
-        displaySearchResults();
-        displayImageResults();
-        displayVideoResults();
-    </script>
+    <script src="src/frontend/script.js"></script>
     <script>
         const checkbox = document.getElementById('checkbox');
 
