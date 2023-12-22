@@ -85,3 +85,6 @@ Special thanks to StarloExoliz, The developer of this project and all the contri
 -OpenAI
 
 Also this project was done by researching, help by Chat-GPT, and tutorials from Youtube!
+
+
+[def]: https://github.com/Kazooki123/starlosearch/blob/main/Images/Screenshot%20(67).png
