@@ -1,5 +1,5 @@
 // Function to check if search query contains NSFW keywords
-function containsNSFWKeywords(query) {
+export function containsNSFWKeywords(query) {
   const nsfwKeywords = ["nsfw", "Nsfw", "adult", "explicit", "inappropriate", "porn", "r34", "rule34", "Hentai", "hentai", "pussy", "loli", "cum", "penis", "p0rn", "XXX", "xxx", "xvideos", "pornhub", "xhamster"]; 
 
   query = query.toLowerCase();
@@ -12,7 +12,7 @@ function containsNSFWKeywords(query) {
 }
 
 // Function to display the search results
-function displaySearchResults(data) {
+export function displaySearchResults(data) {
   var searchResultsDiv = document.getElementById('searchResults');
 
   // Clear previous search results
@@ -57,7 +57,7 @@ function displaySearchResults(data) {
 }
 
 // Function to display the image results
-function displayImageResults(data) {
+export function displayImageResults(data) {
   var searchResultsDiv = document.getElementById('searchResults');
 
   // Clear previous search results
@@ -93,7 +93,7 @@ function displayImageResults(data) {
 }
 
 // Function to display the video results from both APIs
-function displayVideoResults(data, source) {
+export function displayVideoResults(data, source) {
   var searchResultsDiv = document.getElementById('searchResults');
 
   // Create a new section for the results from this source
