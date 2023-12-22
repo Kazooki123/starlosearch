@@ -15,4 +15,18 @@
   ],
   "mojo.modularHomePath": "\\\\wsl.localhost\\Ubuntu-22.04\\root\\.modular",
   "git.enabled": true,
+  "sqltools.connections": [
+    {},
+    {
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5432,
+      "askForPassword": true,
+      "driver": "PostgreSQL",
+      "username": "postgres",
+      "database": "searchenginedb",
+      "name": "searchenginedb",
+      "group": "databases"
+    }
+  ]
 }
