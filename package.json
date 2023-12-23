@@ -32,6 +32,8 @@
     "@google-cloud/translate": "^8.0.2",
     "@google-cloud/video-intelligence": "^5.0.1",
     "@google-cloud/vision": "^4.0.2",
+    "@prisma/client": "^5.7.1",
+    "@prisma/extension-pulse": "^0.1.8",
     "@tensorflow/tfjs": "^4.10.0",
     "@vercel/speed-insights": "^1.0.1",
     "algoliasearch": "^4.19.1",
