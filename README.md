@@ -28,7 +28,8 @@ Link🔗: <https://starlosearch.vercel.app/>
 
 ## Discord:
 
-![Discord](https://img.shields.io/discord/1180840593891545178?logo=discord&logoColor=blue&label=Discord&labelColor=black&link=https%3A%2F%2Fdiscord.gg%2F4tpMaNwhDK)
+https://discord.gg/4tpMaNwhDK
+![Discord](https://img.shields.io/discord/1180840593891545178?logo=discord&logoColor=blue&label=Discord&labelColor=black&link=%3Cobject%3Ehttps%3A%2F%2Fdiscord.gg%2F4tpMaNwhDK%3C%2Fobject%3E)
 
 # Features
 
