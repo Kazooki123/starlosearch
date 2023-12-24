@@ -51,7 +51,7 @@ async fn main() {
     let routes = login_route
         .or(user_route)
         .or(admin_route)
-        .recover(error:handle_rejection);
+        .recover(error, handle_rejection);
 
     warp::serve(routes).run(([127, 0, 0, 1], 8000)).await;
     println!("Server is running successfully on port 8000")
