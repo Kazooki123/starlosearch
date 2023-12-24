@@ -1,3 +1,7 @@
 {
-  "recommendations": ["sswg.swift-lang", "pieterjongsma.swift-playgrounds"]
+  "recommendations": [
+    "sswg.swift-lang",
+    "pieterjongsma.swift-playgrounds",
+    "mgmcdermott.vscode-language-babel"
+  ]
 }
