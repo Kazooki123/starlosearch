@@ -26,6 +26,10 @@ StarloSearch is on Development meaning new features or machine learning will com
 
 Link🔗: <https://starlosearch.vercel.app/>
 
+## Discord:
+
+![Discord](https://img.shields.io/discord/1180840593891545178?logo=discord&logoColor=blue&label=Discord&labelColor=black&link=https%3A%2F%2Fdiscord.gg%2F4tpMaNwhDK)
+
 # Features
 
 Fast and Responsive: StarloSearch is built for speed, delivering search results in the blink of an eye.
