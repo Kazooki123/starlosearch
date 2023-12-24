@@ -2,6 +2,16 @@
 
 [![StarloSearch](https://avatars.githubusercontent.com/u/139462470?s=48&v=4)](https://github.com/Kazooki123/starlosearch.git)
 
+![GitHub License](https://img.shields.io/github/license/Kazooki123/starlosearch?logo=github&label=LICENSE&color=blue)
+![Website](https://img.shields.io/website?url=https%3A%2F%2Fstarlosearch.vercel.app&up_message=online&up_color=green&down_message=not-working&down_color=red&logo=vercel&logoColor=white&label=StarloSearch&labelColor=black&color=wgite)
+![Static Badge](https://img.shields.io/badge/3.12-black?logo=python&logoColor=blue&label=Python&labelColor=white)
+![Static Badge](https://img.shields.io/badge/20.9-black?logo=javascript&logoColor=yellow&label=JavaScript)
+![Static Badge](https://img.shields.io/badge/Rust-black?logo=rust&logoColor=orange)
+![Static Badge](https://img.shields.io/badge/React-black?logo=react&logoColor=blue)
+![Static Badge](https://img.shields.io/badge/HTML-black?logo=html5&logoColor=orange)
+![Static Badge](https://img.shields.io/badge/Svelte-black?logo=svelte&logoColor=orange)
+
+
 # Overview
 
 StarloSearch is a modern and efficient search engine designed to provide users with quick and accurate search results. Whether you're searching for websites, images, or videos, StarloSearch has got you covered. With its intuitive user interface and advanced search algorithms, finding the information you need has never been easier.
@@ -27,20 +37,6 @@ Autocomplete: Save time with real-time autocomplete suggestions as you type your
 Image and Video Search: Find multimedia content with ease using our comprehensive image and video search capabilities.
 
 Search History: Easily access your previous search queries and revisit your search history.
-
-# Getting Started
-
-To run StarloSearch on your local machine, follow these steps:
-
-Clone this repository to your computer using git clone <https://github.com/Kazooki123/starlosearch.git>.
-
-Navigate to the project directory: cd starlosearch.
-
-Install the required dependencies: npm install.
-
-Start the development server: npm run start.
-
-Open your web browser and go to <http://localhost:3000> to access the search engine.
 
 Contributing
 We welcome contributions from the community! If you'd like to contribute to StarloSearch, please follow our Contribution Guidelines for more details.
