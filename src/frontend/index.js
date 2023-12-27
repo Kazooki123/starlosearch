@@ -12,4 +12,4 @@ fs.readFile('script.cjs', 'utf8', (err, data) => {
         // Print the data to the console
         console.log(data);
     }
-});
+}); 
