@@ -23,7 +23,11 @@ body {
     transition: background 0.2s linear;
   }
 
-  p {
+  #mainContent h2 {
+    text-align: center;
+  }
+
+  #mainContent p {
     text-align: center;
   }
   
