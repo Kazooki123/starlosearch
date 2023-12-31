@@ -2,7 +2,7 @@
 
 [![StarloSearch](https://avatars.githubusercontent.com/u/139462470?s=48&v=4)](https://github.com/Kazooki123/starlosearch.git)
 
-![GitHub License](https://img.shields.io/github/license/Kazooki123/starlosearch?logo=github&label=LICENSE&color=blue)
+![GitHub License](https://img.shields.io/github/license/Kazooki123/starlosearch?style=for-the-badge&logo=github&color=red)
 ![Website](https://img.shields.io/website?url=https%3A%2F%2Fstarlosearch.vercel.app&up_message=online&up_color=green&down_message=not-working&down_color=red&logo=vercel&logoColor=white&label=StarloSearch&labelColor=black&color=wgite)
 ![Static Badge](https://img.shields.io/badge/3.12-black?logo=python&logoColor=blue&label=Python&labelColor=white)
 ![Static Badge](https://img.shields.io/badge/20.9-black?logo=javascript&logoColor=yellow&label=JavaScript)
