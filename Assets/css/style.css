@@ -22,6 +22,10 @@ body {
     color: white;
     transition: background 0.2s linear;
   }
+
+  p {
+    text-align: center;
+  }
   
   /* Main Content */
   .video-container {
