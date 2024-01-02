@@ -3,13 +3,13 @@
 [![StarloSearch](https://avatars.githubusercontent.com/u/139462470?s=48&v=4)](https://github.com/Kazooki123/starlosearch.git)
 
 ![GitHub License](https://img.shields.io/github/license/Kazooki123/starlosearch?style=for-the-badge&logo=github&color=red)
-![Website](https://img.shields.io/website?url=https%3A%2F%2Fstarlosearch.vercel.app&up_message=online&up_color=green&down_message=not-working&down_color=red&logo=vercel&logoColor=white&label=StarloSearch&labelColor=black&color=wgite)
-![Static Badge](https://img.shields.io/badge/3.12-black?logo=python&logoColor=blue&label=Python&labelColor=white)
-![Static Badge](https://img.shields.io/badge/20.9-black?logo=javascript&logoColor=yellow&label=JavaScript)
-![Static Badge](https://img.shields.io/badge/Rust-black?logo=rust&logoColor=orange)
-![Static Badge](https://img.shields.io/badge/React-black?logo=react&logoColor=blue)
-![Static Badge](https://img.shields.io/badge/HTML-black?logo=html5&logoColor=orange)
-![Static Badge](https://img.shields.io/badge/Svelte-black?logo=svelte&logoColor=orange)
+![Website](https://img.shields.io/website?style=for-the-badge&url=https%3A%2F%2Fstarlosearch.vercel.app&up_message=online&up_color=green&down_message=not-working&down_color=red&logo=vercel&logoColor=white&label=StarloSearch&labelColor=black&color=wgite)
+![Static Badge](https://img.shields.io/badge/3.12-black?style=for-the-badge&logo=python&logoColor=blue&label=Python&labelColor=white)
+![Static Badge](https://img.shields.io/badge/20.9-black?style=for-the-badge&logo=javascript&logoColor=yellow&label=JavaScript)
+![Static Badge](https://img.shields.io/badge/Rust-black?style=for-the-badge&logo=rust&logoColor=orange)
+![Static Badge](https://img.shields.io/badge/React-black?style=for-the-badge&logo=react&logoColor=blue)
+![Static Badge](https://img.shields.io/badge/HTML-black?style=for-the-badge&logo=html5&logoColor=orange)
+![Static Badge](https://img.shields.io/badge/Svelte-black?style=for-the-badge&logo=svelte&logoColor=orange)
 
 
 # Overview
@@ -29,7 +29,7 @@ Link🔗: <https://starlosearch.vercel.app/>
 ## Discord:
 
 https://discord.gg/4tpMaNwhDK
-![Discord](https://img.shields.io/discord/1180840593891545178?logo=discord&logoColor=blue&label=Discord&labelColor=black&link=%3Cobject%3Ehttps%3A%2F%2Fdiscord.gg%2F4tpMaNwhDK%3C%2Fobject%3E)
+![Discord](https://img.shields.io/discord/1180840593891545178?style=for-the-badge&logo=discord&logoColor=blue&label=Discord&labelColor=black&link=%3Cobject%3Ehttps%3A%2F%2Fdiscord.gg%2F4tpMaNwhDK%3C%2Fobject%3E)
 
 # Features
 
