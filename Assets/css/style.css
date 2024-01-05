@@ -23,7 +23,11 @@ body {
     transition: background 0.2s linear;
   }
 
+<<<<<<< HEAD
   #mainContent h2 {
+=======
+  #mainContent h1 {
+>>>>>>> bf1cd7dbcc5d71dfd64e29832ba96669927cfce1
     text-align: center;
   }
 
