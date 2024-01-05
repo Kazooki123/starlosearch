@@ -76,7 +76,7 @@ async fn authorize((role, headers): (Role, HeaderMap<HeaderValue>)) -> WebResult
                     &DecodingKey::from_secret(JWT_SECRET),
                     &Validation::new(Algorithm::HS512),
             )
-            .map_err(|_| reject::custom(Erro::JWTTokenError))?;
+            .map_err(|_| reject::custom(Error::JWTTokenError))?;
 
             if role == Role::Admin && Role::from_str(&decode.claims.role) != Role::Admin {
                 return Err(reject::custom(Error::NoPermissionError));

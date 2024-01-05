@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: 'Roboto';
-  src: url('Assets/fonts/Roboto-Regular.ttf') format('truetype');
+  src: url('../fonts/Roboto-Regular.ttf') format('truetype');
   /* Add more font weights and styles as needed */
 }
 
@@ -21,6 +21,14 @@ body {
     background-color: black;
     color: white;
     transition: background 0.2s linear;
+  }
+
+  #mainContent h2 {
+    text-align: center;
+  }
+
+  #mainContent p {
+    text-align: center;
   }
   
   /* Main Content */
