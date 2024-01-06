@@ -13,7 +13,7 @@ fn do_something() -> redis::RedisResult<()> {
     let mut con = client.get_connection()?;
 
     // Set a key-value pair
-    let _: () = con.set("HELLO", "HIJACKED")?;
+    let _: () = con.set("HELLO", "WELCOME")?;
 
     // Get the value of the key
     let value: String = con.get("HELLO")?;
