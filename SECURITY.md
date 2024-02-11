@@ -4,23 +4,23 @@
 
 Use this section to inform users about which versions of your project are currently being supported with security updates.
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+| Version | Supported             |
+| ------- | ------------------    |
+| 5.1.x   |   ✔️                  |
+| 5.0.x   |   ✔️                  |
+| 4.0.x   |   ✖️                  |
+| < 4.0   |   ✖️                  |
 
 ## Python and Node.js Support
 
 - Python:
-  - 3.12.x :white_check_mark:
-  - 3.11.x :white_check_mark:
-  - 3.10.x :white_check_mark:
+  - 3.12.x - [x]
+  - 3.11.x - [x]
+  - 3.10.x - [x]
 
 - Node.js:
-  - Latest version :white_check_mark:
-  - Older versions :x:
+  - Latest version - [ ]
+  - Older versions - [ ]
 
 ## Security Features
 
