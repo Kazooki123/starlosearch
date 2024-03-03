@@ -5,6 +5,8 @@ function search() {
   // Define question (lowercase search query) before using it
   const question = searchQuery.toLowerCase();
 
+  const searchResultsElement = document.getElementById("searchResults");
+
   // Define pre-generated answers (NOTE: THIS IS A TEST TO LEARN MY STEPS ON HOW TO IMPLEMENT A.I GENERATED ANSWERS INTO MY SEARCH ENGINE SYSTEMS. EVENTUALLY THIS CODE MIGHT BE REMOVED OR MODIFIED, DEPENDING ON PLANS THAT MIGHT CHANGE THROUGH MONTHS OR YEARS)
   const answers = {
     "why is the sky blue?":
@@ -22,7 +24,7 @@ function search() {
   if (answers.hasOwnProperty(searchQuery.toLowerCase())) {
     generativeAnswerBoxElement.textContent = answers[question];
   } else {
-    searchResultElement.textContent =
+    searchResultsElement.textContent =
       "Sorry, I don't have an answer for that question yet.";
   }
 
