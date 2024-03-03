@@ -5,11 +5,12 @@ function search() {
   // Define question (lowercase search query) before using it
   const question = searchQuery.toLowerCase();
 
-  // Define pre-generated answers
+  // Define pre-generated answers (NOTE: THIS IS A TEST TO LEARN MY STEPS ON HOW TO IMPLEMENT A.I GENERATED ANSWERS INTO MY SEARCH ENGINE SYSTEMS. EVENTUALLY THIS CODE MIGHT BE REMOVED OR MODIFIED, DEPENDING ON PLANS THAT MIGHT CHANGE THROUGH MONTHS OR YEARS)
   const answers = {
     "why is the sky blue?":
       "The sky appears blue because of how sunlight interacts with Earth's atmosphere. When sunlight enters the atmosphere, tiny air molecules scatter the different colors of light. Blue light has a shorter wavelength and is scattered more easily than other colors, reaching our eyes from all directions and making the sky appear blue.",
-    // Add more questions and answers as needed
+    "why am I single?": "Because you're afraid to talk to girls.",
+    "How to confess to my crush?": "Just tell her ¯_(ツ)_/¯",
   };
 
   // Get the search result element
