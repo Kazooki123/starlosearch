@@ -33,7 +33,7 @@ function containsNSFWKeywords(query) {
 }
 
 // Function to display the search results
-function displaySearchResults(data, query) {
+function displaySearchResults(data) {
   var searchResultsDiv = document.getElementById("searchResults");
 
   // Clear previous search results

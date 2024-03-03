@@ -2,6 +2,9 @@ function search() {
   // Get the user's search query once
   const searchQuery = document.getElementById("searchInput").value;
 
+  // Define question (lowercase search query) before using it
+  const question = searchQuery.toLowerCase();
+
   // Define pre-generated answers
   const answers = {
     "why is the sky blue?":
@@ -16,7 +19,7 @@ function search() {
 
   // Check for a pre-generated answer
   if (answers.hasOwnProperty(searchQuery.toLowerCase())) {
-    generativeAnswerBoxElement.textContent = answers[question.toLowerCase()];
+    generativeAnswerBoxElement.textContent = answers[question];
   } else {
     searchResultElement.textContent =
       "Sorry, I don't have an answer for that question yet.";
