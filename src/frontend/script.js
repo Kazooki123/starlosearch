@@ -10,11 +10,13 @@ function search() {
   };
 
   // Get the search result element
-  const searchResultElement = document.getElementById("searchResults");
+  const generativeAnswerBoxElement = document.getElementById(
+    "generativeAnswerBox"
+  );
 
   // Check for a pre-generated answer
   if (answers.hasOwnProperty(searchQuery.toLowerCase())) {
-    searchResultElement.textContent = answers[searchQuery.toLowerCase()];
+    generativeAnswerBoxElement.textContent = answers[question.toLowerCase()];
   } else {
     searchResultElement.textContent =
       "Sorry, I don't have an answer for that question yet.";
