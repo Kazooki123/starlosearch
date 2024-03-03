@@ -1,15 +1,33 @@
 function search() {
-  var searchQuery = document.getElementById('searchInput').value;
+  // Get the user's search term
+  const question = document.getElementById("searchInput").value;
+  var searchQuery = document.getElementById("searchInput").value;
 
-  fetch(`https://www.googleapis.com/customsearch/v1?key=AIzaSyBkc8B7LNvNoJPv6LOVveEE2T_zpSvG_uQ&cx=03d9c25b28b784a57&q=${searchQuery}`)
-        .then(response => response.json())
-    .then(data => {
-          console.log("Received data:", data);
-          displaySearchResults(data, searchQuery);
-        })
-        .catch(error => {
-          console.error('Error:', error);
-        });
+  // Define pre-generated answers (can be extended for other questions)
+  const answers = {
+    "why is the sky blue?":
+      "The sky appears blue because of how sunlight interacts with Earth's atmosphere. When sunlight enters the atmosphere, tiny air molecules scatter the different colors of light. Blue light has a shorter wavelength and is scattered more easily than other colors, reaching our eyes from all directions and making the sky appear blue.",
+  };
+
+  // Check if the user's question matches a pre-generated answer
+  if (answers.hasOwnProperty(question.toLowerCase())) {
+    searchResultElement.textContent = answers[question.toLowerCase()];
+  } else {
+    searchResultElement.textContent =
+      "Sorry, I don't have an answer for that question yet.";
+  }
+
+  fetch(
+    `https://www.googleapis.com/customsearch/v1?key=AIzaSyBkc8B7LNvNoJPv6LOVveEE2T_zpSvG_uQ&cx=03d9c25b28b784a57&q=${searchQuery}`
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("Received data:", data);
+      displaySearchResults(data, searchQuery);
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
   addHistoryItem(searchQuery);
 }
 

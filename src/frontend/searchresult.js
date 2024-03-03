@@ -39,21 +39,6 @@ function displaySearchResults(data, query) {
   // Clear previous search results
   searchResultsDiv.innerHTML = "";
 
-  const skyBlueAnswer =
-    "The sky appears blue because of a phenomenon called Rayleigh scattering. Sunlight consists of a mixture of colors with different wavelengths. When sunlight enters Earth's atmosphere, the shorter blue wavelengths are scattered more than the longer red wavelengths. This scattered blue light reaches our eyes, making the sky appear blue.";
-
-  if (query.toLowerCase() === "why is the sky blue?") {
-    const answerBox = document.getElementById("generativeAnswerBox");
-
-    // Check if data.text exists and is a string before conversion
-    if (data && typeof data.text === "string") {
-      answerBox.textContent = skyBlueAnswer;
-    } else {
-      console.error("Error: Invalid data format for search results.");
-    }
-    return;
-  }
-
   // Extract and display the search results
   if (data.items && data.items.length > 0) {
     data.items.forEach((item) => {
