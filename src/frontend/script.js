@@ -11,8 +11,8 @@ function search() {
   const answers = {
     "why is the sky blue?":
       "The sky appears blue because of how sunlight interacts with Earth's atmosphere. When sunlight enters the atmosphere, tiny air molecules scatter the different colors of light. Blue light has a shorter wavelength and is scattered more easily than other colors, reaching our eyes from all directions and making the sky appear blue.",
-    "why am I single?": "Because you're afraid to talk to girls.",
-    "How to confess to my crush?": "Just tell her ¯_(ツ)_/¯",
+    "why am i single?": "Because you're afraid to talk to girls.",
+    "how to confess to my crush?": "Just tell her ¯_(ツ)_/¯",
   };
 
   // Get the search result element
