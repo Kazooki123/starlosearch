@@ -4,7 +4,7 @@ function search() {
   fetch(`https://www.googleapis.com/customsearch/v1?key=AIzaSyBkc8B7LNvNoJPv6LOVveEE2T_zpSvG_uQ&cx=03d9c25b28b784a57&q=${searchQuery}`)
         .then(response => response.json())
         .then(data => {
-          displaySearchResults(data);
+          displaySearchResults(data, searchQuery);
         })
         .catch(error => {
           console.error('Error:', error);
