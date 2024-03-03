@@ -1,17 +1,20 @@
 function search() {
-  // Get the user's search term
-  const question = document.getElementById("searchInput").value;
-  var searchQuery = document.getElementById("searchInput").value;
+  // Get the user's search query once
+  const searchQuery = document.getElementById("searchInput").value;
 
-  // Define pre-generated answers (can be extended for other questions)
+  // Define pre-generated answers
   const answers = {
     "why is the sky blue?":
       "The sky appears blue because of how sunlight interacts with Earth's atmosphere. When sunlight enters the atmosphere, tiny air molecules scatter the different colors of light. Blue light has a shorter wavelength and is scattered more easily than other colors, reaching our eyes from all directions and making the sky appear blue.",
+    // Add more questions and answers as needed
   };
 
-  // Check if the user's question matches a pre-generated answer
-  if (answers.hasOwnProperty(question.toLowerCase())) {
-    searchResultElement.textContent = answers[question.toLowerCase()];
+  // Get the search result element
+  const searchResultElement = document.getElementById("searchResults");
+
+  // Check for a pre-generated answer
+  if (answers.hasOwnProperty(searchQuery.toLowerCase())) {
+    searchResultElement.textContent = answers[searchQuery.toLowerCase()];
   } else {
     searchResultElement.textContent =
       "Sorry, I don't have an answer for that question yet.";
