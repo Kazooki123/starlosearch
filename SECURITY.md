@@ -14,13 +14,14 @@ Use this section to inform users about which versions of your project are curren
 ## Python and Node.js Support
 
 - Python:
-  - 3.12.x - [x]
-  - 3.11.x - [x]
-  - 3.10.x - [x]
+  - 3.12.x - ✔️
+  - 3.11.x - ✔️
+  - 3.10.x - ✔️
+  - Versions below - ✖️
 
 - Node.js:
-  - Latest version - [ ]
-  - Older versions - [ ]
+  - Latest version - ✔️
+  - Older versions - ✖️
 
 ## Security Features
 
