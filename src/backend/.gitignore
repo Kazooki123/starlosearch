@@ -2,3 +2,4 @@
 venv/
 requirements.txt
 .env
+test/

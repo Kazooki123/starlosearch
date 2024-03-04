@@ -1,0 +1,221 @@
+/* Add your CSS styles here */
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+  /* Add more font weights and styles as needed */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../../Images/waveflow2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+    color: black;
+    transition: background 0.2s linear;
+  }
+
+  .dark-mode {
+    background-color: black;
+    color: white;
+    transition: background 0.2s linear;
+  }
+  
+  .video {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Search Bar */
+  #searchBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    outline: none;
+    border: none;
+  }
+  
+  #searchInput {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 300px;
+    margin-right: 10px;
+  }
+  
+  #searchButton {
+    border-radius: 10px; /* Adjust the radius to your preference */
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  #searchButton:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 5px 0 #ccc;
+  }  
+  
+  /* Search Results */
+  #searchResults {
+    margin-top: 20px;
+  }
+  
+  .searchResult {
+    margin-bottom: 10px;
+  }
+  
+  .searchResult h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .searchResult p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  .imageResult {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .imageResult img {
+    margin-right: 10px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  
+  .imageResult a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+  }
+  
+  .videoResult {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .videoResult img {
+    margin-right: 10px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  
+  .videoResult a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+  }
+  
+  /* Autocomplete */
+  .autocomplete {
+    position: relative;
+    display: inline-block;
+    width: 300px;
+  }
+  
+  .autocomplete-items {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 99;
+  }
+  
+  .autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .autocomplete-items div:hover {
+    background-color: #e9e9e9;
+  }
+  
+  .autocomplete-active {
+    background-color: #4CAF50 !important;
+    color: #fff;
+  }
+
+  #generativeAnswerBox {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+
+  /* Add these CSS styles in your style.css file */
+  .mic-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .mic-icon:before {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 18px solid white;
+  }
+
+  .mic-icon:after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: red;
+  }
+
+  /* Microphone icon styles */
+  .microphone-icon {
+    position: fixed;
+    bottom: 20px; /* Adjust this value as needed */
+    font-size: 24px; /* Adjust this value as needed */
+    z-index: 9999; /* Ensure it's on top of other elements */
+  }
+
+  .bottom-right {
+    right: 20px;
+  }
+
+  .logo {
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+  .fa-bars {
+    color: #fff;
+  }
+
+  .translate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
