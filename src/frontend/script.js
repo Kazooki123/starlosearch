@@ -1,45 +1,65 @@
+// Define the search function
 function search() {
   // Get the user's search query once
-  const searchQuery = document.getElementById("searchInput").value;
+  var searchQuery = searchInput.value;
 
-  // Define question (lowercase search query) before using it
-  const question = searchQuery.toLowerCase();
-
-  const searchResultsElement = document.getElementById("searchResults");
-
-  // Define pre-generated answers (NOTE: THIS IS A TEST TO LEARN MY STEPS ON HOW TO IMPLEMENT A.I GENERATED ANSWERS INTO MY SEARCH ENGINE SYSTEMS. EVENTUALLY THIS CODE MIGHT BE REMOVED OR MODIFIED, DEPENDING ON PLANS THAT MIGHT CHANGE THROUGH MONTHS OR YEARS)
-  const answers = {
-    "why is the sky blue?":
-      "The sky appears blue because of how sunlight interacts with Earth's atmosphere. When sunlight enters the atmosphere, tiny air molecules scatter the different colors of light. Blue light has a shorter wavelength and is scattered more easily than other colors, reaching our eyes from all directions and making the sky appear blue.",
-    "why am i single?": "Because you're afraid to talk to girls.",
-    "how to confess to my crush?": "Just tell her ¯_(ツ)_/¯",
-  };
-
-  // Get the search result element
-  const generativeAnswerBoxElement = document.getElementById(
-    "generativeAnswerBox"
-  );
-
-  // Check for a pre-generated answer
-  if (answers.hasOwnProperty(searchQuery.toLowerCase())) {
-    generativeAnswerBoxElement.textContent = answers[question];
-  } else {
-    searchResultsElement.textContent =
-      "Sorry, I don't have an answer for that question yet.";
+  // Check if the search query is empty
+  if (searchQuery === "") {
+    // Show a message to the user
+    alert("Please enter something to search");
+    // Exit the function
+    return;
   }
 
-  fetch(
-    `https://www.googleapis.com/customsearch/v1?key=AIzaSyBkc8B7LNvNoJPv6LOVveEE2T_zpSvG_uQ&cx=03d9c25b28b784a57&q=${searchQuery}`
-  )
-    .then((response) => response.json())
-    .then((data) => {
-      console.log("Received data:", data);
-      displaySearchResults(data, searchQuery);
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-    });
+  // Use the searchweb tool to get the search results from the web
+  var webInfo = search_web(
+    searchQuery +
+      "&key=AIzaSyBkc8B7LNvNoJPv6LOVveEE2T_zpSvG_uQ&cx=03d9c25b28b784a57"
+  );
+
+  // Parse the webInfo string into a JSON object
+  var webInfoObj = JSON.parse(webInfo);
+
+  // Get the array of web search results
+  var webResults = webInfoObj.web_search_results;
+
+  // Check for a pre-generated answer
+  switch (searchQuery.toLowerCase()) {
+    case "why is the sky blue?":
+      generativeAnswerBox.textContent =
+        "The sky appears blue because of how sunlight interacts with Earth's atmosphere. When sunlight enters the atmosphere, tiny air molecules scatter the different colors of light. Blue light has a shorter wavelength and is scattered more easily than other colors, reaching our eyes from all directions and making the sky appear blue.";
+      break;
+    case "why am i single?":
+      generativeAnswerBox.textContent = "Because you're afraid to talk to girls.";
+      break;
+    case "how to confess to my crush?":
+      generativeAnswerBox.textContent = "Just tell her ¯_(ツ)/¯";
+      break;
+    default:
+      // Get the first web search result
+      var webResult = webInfoObj.web_search_results[0];
+
+      // Get the title, snippet, and url of the web result
+      var webTitle = webResult.title;
+      var webSnippet = webResult.snippet;
+      var webUrl = webResult.url;
+
+      // Display the web information in the generativeAnswerBox div
+      generativeAnswerBox.innerHTML = `
+       <h3>${webTitle}</h3>
+       <p>${webSnippet}</p>
+       <a href="${webUrl}">Read more</a>
+      `;
+  }
+
+  // Display the web search results in the searchResults div
+  displaySearchResults(webResults, searchQuery);
+
+  // Add the search query to the history
   addHistoryItem(searchQuery);
+
+  // Load the search-result.html file into the mainContent div
+  loadSearchResultPage();
 }
 
 function loadSearchResultPage() {
