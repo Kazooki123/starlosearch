@@ -40,7 +40,7 @@ function displaySearchResults(data) {
   searchResultsDiv.innerHTML = "";
 
   // Extract and display the search results
-  if (data.items && data.items.length > 0) {
+  if (Array.isArray(data.items) && data.items.length) {
     data.items.forEach((item) => {
       // Check for NSFW keywords
       if (
@@ -75,7 +75,16 @@ function displaySearchResults(data) {
           // Display regular search result
           var resultDiv = document.createElement("div");
           resultDiv.className = "searchResult";
-          resultDiv.innerHTML = `<h3><a href="${item.link}" target="_blank">${item.title}</a></h3><p>${item.snippet}</p>`;
+          let h3 = document.createElement("h3");
+          let a = document.createElement("a");
+          a.href = item.link;
+          a.target = "_blank";
+          a.textContent = item.title;
+          h3.appendChild(a);
+          let p = document.createElement("p");
+          p.textContent = item.snippet;
+          resultDiv.appendChild(h3);
+          resultDiv.appendChild(p);
           searchResultsDiv.appendChild(resultDiv);
         }
       }
@@ -93,7 +102,7 @@ function displayImageResults(data) {
   searchResultsDiv.innerHTML = "";
 
   // Extract and display the image results
-  if (data.items && data.items.length > 0) {
+  if (Array.isArray(data.items) && data.items.length) {
     data.items.forEach((item) => {
       // Check for NSFW keywords
       if (
@@ -142,7 +151,7 @@ function displayVideoResults(data, source) {
   section.innerHTML = "";
 
   // Extract and display the video results
-  if (data.items && data.items.length > 0) {
+  if (Array.isArray(data.items) && data.items.length) {
     data.items.forEach((item) => {
       var videoResultDiv = document.createElement("div");
       videoResultDiv.className = "videoResult";
