@@ -46,26 +46,20 @@ async function loadSearchResultPage() {
   var mainContent = document.getElementById("mainContent");
 
   try {
-    // Fetch the HTML file
     let response = await fetch("../../search-result.html");
-    // Check if the response is OK
     if (response.ok) {
-      // Parse the response as text
       let html = await response.text();
-      // Create a new document from the HTML string
-      let doc = new DOMParser().parseFromString(html, "text/html");
-      // Replace the main content with the new document
-      mainContent.parentNode.replaceChild(doc, mainContent);
+      let newElement = document.createElement("div");
+      newElement.innerHTML = html;
+      
+      mainContent.parentNode.replaceChild(newElement, mainContent);
     } else {
-      // Handle the error
       console.error("Error:", response.status, response.statusText);
     }
   } catch (error) {
-    // Handle the error
     console.error("Error:", error);
   }
 }
-
 
 // Function to handle the image button click
 function viewImages() {
