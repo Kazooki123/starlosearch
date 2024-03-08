@@ -1,6 +1,6 @@
 // clerk-service.js
 import Clerk from "../../node_modules/@clerk/clerk-js/dist/types/index";
-import dotenv from 'dotenv';
+import dotenv from '../../node_modules/dotenv/lib/main';
 
 dotenv.config({ path: '.env' });
 
