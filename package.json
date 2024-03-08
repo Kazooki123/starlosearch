@@ -24,6 +24,7 @@
   "license": "MIT",
   "dependencies": {
     "@algolia/autocomplete-js": "^1.11.0",
+    "@clerk/clerk-js": "^4.70.3",
     "@google-cloud/language": "^6.1.1",
     "@google-cloud/logging": "^11.0.0",
     "@google-cloud/speech": "^6.1.0",
