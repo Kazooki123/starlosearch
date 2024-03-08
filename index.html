@@ -144,6 +144,31 @@
     <script src="src/frontend/chatbot/response.js"></script>
     <script src="src/frontend/chatbot/chatbot.js"></script>
     <script src="src/frontend/script.js"></script>
+
+    <script>
+        // Get this URL and Publishable Key from the Clerk Dashboard
+        const clerkPublishableKey = `pk_test_YWRlcXVhdGUtdmVydmV0LTExLmNsZXJrLmFjY291bnRzLmRldiQ`;
+        const frontendApi = 'https://starlosearch.vercel.app.clerk.accounts.dev';
+        const version = '@latest'; // Set to appropriate version
+ 
+        // Creates asynchronous script
+        const script = document.createElement('script');
+        script.setAttribute('data-clerk-frontend-api', frontendApi);
+        script.setAttribute('data-clerk-publishable-key', clerkPublishableKey);
+        script.async = true;
+        script.src = `https://${frontendApi}/npm/@clerk/clerk-js${version}/dist/clerk.browser.js`;
+ 
+        // Adds listener to initialize ClerkJS after it's loaded
+        script.addEventListener('load', async function () {
+            await window.Clerk.load({
+                redirectUrl: 'https://starlorsearch.vercel.app/index.html',
+                afterSignInUrl: 'https://starlorsearch.vercel.app/index.html',
+                afterSignUpUrl: 'https://starlorsearch.vercel.app/index.html'
+            });
+        });
+        document.body.appendChild(script);
+    </script>
+
     <script>
         const checkbox = document.getElementById('checkbox');
 
