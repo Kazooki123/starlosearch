@@ -39,7 +39,6 @@ function search() {
       console.error("Error:", error);
     });
   addHistoryItem(searchQuery);
-  loadSearchResultPage();
 }
 
 async function loadSearchResultPage() {
