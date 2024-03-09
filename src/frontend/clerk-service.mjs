@@ -1,7 +1,10 @@
 // clerk-service.mjs
-import Clerk from "@clerk/clerk-js"
+import Clerk from "@clerk/clerk-js";
+import dotenv from "dotenv";
 
-const clerkPublishableKey = `pk_test_cGxlYXNpbmctcmVpbmRlZXItNTEuY2xlcmsuYWNjb3VudHMuZGV2JA`;
+dotenv.config();
+
+const clerkPublishableKey = process.env.CLERK_PUBLISHER_KEY;
 
 async function loadClerk() {
   const clerk = new Clerk(clerkPublishableKey);
