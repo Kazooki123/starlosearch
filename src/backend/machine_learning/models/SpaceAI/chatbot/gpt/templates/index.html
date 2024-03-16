@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot</title>
+</head>
+<body>
+    <form action="/generate" method="post">
+        <input type="text" name="input_text" placeholder="Enter some text">
+        <input type="submit" value="Generate">
+    </form>
+    <!-- Display the generated text -->
+    {% if generated_text %}
+        <p>Generated Text: {{ generated_text }}</p>
+    {% endif %}
+</body>
+</html>

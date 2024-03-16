@@ -158,38 +158,43 @@
         }
     </script>
     <script>
-            function openChatbot() {
-                chatbotContainer.style.display = "block";
-            }
+        function openChatbot() {
+            chatbotContainer.style.display = "block";
+        }
 
-            function displayMessage(message, isBot = false) {
-                const messageDiv = document.createElement("div");
-                messageDiv.className = isBot ? "bot-message" : "user-message";
-                messageDiv.textContent = message;
-                chatbotMessages.appendChild(messageDiv);
-            }
+        function displayMessage(message, isBot = false) {
+            const messageDiv = document.createElement("div");
+            messageDiv.className = isBot ? "bot-message" : "user-message";
+            messageDiv.textContent = message;
+            chatbotMessages.appendChild(messageDiv);
+        }
 
-            function sendMessage() {
-                const userMessage = document.getElementById('userMessage').value;
-                const chatbotMessages = document.getElementById('chatbotMessages');
-                displayMessage(userMessage);
-                const chatbotResponse = handleUserMessage(userMessage);
-                displayMessage(chatbotResponse, true);
-                document.getElementById('userMessage').value = '';
-            }
+        async function sendMessage() {
+            const userMessage = document.getElementById('userMessage').value;
+            const chatbotMessages = document.getElementById('chatbotMessages');
+            displayMessage(userMessage);
+            document.getElementById('userMessage').value = '';
 
-            function handleUserMessage(message) {
-                message = message.toLowerCase();
-                if (message.includes("hello")) {
-                    return "Hello! How can I assist you today?";
-                } else if (message.includes("goodbye")) {
-                    return "Goodbye! Have a great day!";
-                } else {
-                    return "I'm sorry, I don't understand that request.";
-                }
+            // Send the message to the Flask server
+            const response = await fetch('http://127.0.0.1:5000/generate', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ input_text: userMessage })
+            });
+
+            // Wait for the Flask server to respond with the generated text
+            const data = await response.json();
+
+            // Display the generated text
+            if (data.generated_text) {
+                displayMessage(data.generated_text, true);
+            } else {
+                displayMessage("Sorry, I couldn't generate a response. Please try again.", true);
             }
-    </script>
-    <script>
+        }
+
         function closeChatbot() {
             chatbotContainer.style.display = 'none';
         }
