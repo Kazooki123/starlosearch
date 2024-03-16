@@ -6,6 +6,7 @@ os.environ['HF_HOME'] = 'D://huggingface'
 
 custom_cache_dir = 'D://huggingface_cache'
 
+
 # Function to generate text based on a given prompt
 def generate_text(prompt):
     # Load pre-trained model tokenizer (vocabulary)

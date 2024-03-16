@@ -5,12 +5,14 @@ from flask import Flask, redirect, render_template, request, session, url_for
 app = Flask(__name__)
 app.secret_key = os.environ.get("SECRET_KEY")
 
+
 @app.route("/")
 def index():
     if "user" in session:
         return render_template("index.html", user=session["user"])
     else:
         return render_template("login.html")
+
 
 @app.route("/login", methods=["POST"])
 def login():
@@ -22,6 +24,7 @@ def login():
         return redirect(url_for("index"))
     else:
         return render_template("login.html", error="Invalid credentials")
+
 
 @app.route("/logout")
 def logout():
