@@ -8,27 +8,32 @@
 </head>
 <body>
     <h1>StarloSearch API Reference</h1>
+
     <p>Welcome to the StarloSearch API Reference. Below, you'll find detailed information about the available API endpoints and how to use them.</p>
 
     <!--API documenation here-->
     <section>
         <h2>Overview</h2>
+
         <p>StarloSearch API allows developers to integrate our search capabilities into their applications. This documentation provides all the necessary information to get started.</p>
     </section>
 
     <section>
         <h2>Authentication</h2>
+
         <p>All API requests require the use of an API key generated using Go's secure cryptographic features.</p>
     </section>
 
     <section>
         <h3>Generating an API Key</h3>
+
         <code>POST /api/v1/keys/generate</code>
         <p>Make a POST request to this endpoint to generate a new API key.</p>
     </section>
 
     <section>
         <h3>Using Your API Key</h3>
+
         <p>Include your API key in the header of every API request:</p>
         <code>Authorization: Bearer YOUR_API_KEY</code>
     </section>
@@ -37,11 +42,13 @@
         <h2>Endpoints</h2>
         <article>
             <h3>Search</h3>
+
             <code>GET /api/v1/search?q={query}</code>
             <p>Use this endpoint to perform a search query.</p>
         </article>
         <article>
             <h3>Results</h3>
+
             <code>GET /api/v1/search/results?id={search_id}</code>
             <p>Retrieve the results for a specific search query.</p>
         </article>
@@ -49,25 +56,29 @@
 
     <section>
         <h2>Security</h2>
+
         <p>API keys are secured using Go's <code>crypto</code> package, ensuring SHA-256 hashing and constant-time comparison for robust security against timing attacks.</p>
     </section>
 
     <section>
         <h2>Error Handling</h2>
+
         <p>The API uses standard HTTP status codes to indicate the success or failure of an API request.</p>
     </section>
 
     <section>
         <h2>Rate Limiting</h2>
+
         <p>To ensure fair usage, the API enforces rate limiting. Exceeding the limit will result in a 429 error </p>
     </section>
 
     <section>
         <h2>Support</h2>
+
         <p>For now you can contact the creator <a href="mgamerdinge146@gmail.com"></a>mgamerdinge146@gmail.com because we don't have an official support mail or support team yet.</p>
     </section>
 
-
+    
     <!-- Link to API keys access page -->
     <p>For access to the StarloSearch APIs, you'll need an API key, You can manage your API keys <a href="api-keys_access.html">here</a>.</p>
 </body>
