@@ -1,7 +1,9 @@
 from flask import Flask, render_template, request
+from flask_cors import cross_origin
 import text_gen  # Ensure text_gen.py is in the same directory as app.py
 
 app = Flask(__name__)
+
 
 @app.route('/')
 def index():
@@ -9,6 +11,7 @@ def index():
     return render_template('index.html')
 
 @app.route('/generate', methods=['POST'])
+@cross_origin(origin='starlosearch.vercel.app')
 def generate_text():
     # Get input text from the form
     input_text = request.form['input_text']
