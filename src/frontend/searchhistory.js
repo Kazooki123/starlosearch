@@ -1,3 +1,12 @@
+// BY KAZOOKI123 LICENSE UNDER THE MIT LICENSE
+//        SOCIALS:
+//    @Kazooki123 - Github
+//    @m4rk_11267 - Discord
+//    @imyourcomrade2nd - Tiktok
+//    @MrUnknown157 - Twitter
+//    @_markkkyy1 - Instagram
+//============================================//
+
 const clearButton = document.getElementById('clearButton');
 const historyList = document.getElementById('historyList');
 
