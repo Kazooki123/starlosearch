@@ -1,17 +1,16 @@
 from flask import Flask, render_template, request
-from flask_cors import cross_origin, CORS
+from flask_cors import CORS
 import text_gen  # Ensure text_gen.py is in the same directory as app.py
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/generate": {"origins": "https://starlosearch.vercel.app"}})
 
 @app.route('/')
 def index():
     # No need to include 'templates/' since Flask automatically searches this folder
     return render_template('index.html')
 
-@app.route('/generate', methods=['POST'])
-@cross_origin(origin='https://starlosearch.vercel.app')
+@app.route('/generate', methods=['POST', 'OPTIONS'])
 def generate_text():
     # Get input text from the form
     input_text = request.form['input_text']

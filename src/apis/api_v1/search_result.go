@@ -1,4 +1,4 @@
-package main
+package search_result
 
 import (
     "encoding/json"

@@ -22,7 +22,7 @@ func main() {
     router := mux.NewRouter()
 
     // Define your API routes
-    router.HandleFunc("/generate", GenerateAPIKeyHadler).Methods("GET")
+    router.HandleFunc("/generate", GenerateAPIKeyHandler).Methods("GET")
 
     // Use CORS middleware
     c := cors.New(cors.Options{
@@ -39,7 +39,7 @@ func main() {
     http.ListenAndServe(fmt.Sprintf(":%d", port), handler)
 }
 
-func GenerateAPIKeyHadler(w http.ResponseWriter, r *http.Request) {
+func GenerateAPIKeyHandler(w http.ResponseWriter, r *http.Request) {
     // Generate a random API Key
     apiKey := GenerateAPIKey()
 
