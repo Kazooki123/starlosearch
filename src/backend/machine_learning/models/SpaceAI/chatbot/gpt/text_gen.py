@@ -18,7 +18,7 @@ def generate_text(prompt):
     input_ids = tokenizer.encode(prompt, return_tensors='pt')
 
     # Generate text until the output length (which includes the context length) reaches 50 tokens
-    output = model.generate(input_ids, max_length=50)
+    output = model.generate(input_ids, max_length=100)
 
     # Decode the generated tokens to get the generated text
     generated_text = tokenizer.decode(output[0], skip_special_tokens=True)
