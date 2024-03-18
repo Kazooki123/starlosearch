@@ -1,10 +1,11 @@
 from flask import Flask, render_template, request
-from flask_cors import CORS
 
 import text_gen
 
+# from flask_cors import CORS
+
 app = Flask(__name__)
-CORS(app, resources={r"/generate": {"origins": "https://starlosearch.vercel.app"}})
+# CORS(app, resources={r"/generate": {"origins": "https://starlosearch.vercel.app"}})
 
 
 @app.route("/")
@@ -13,7 +14,7 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/generate", methods=["POST", "OPTIONS"])
+@app.route("/generate", methods=["POST"])
 def generate_text():
     input_text = request.form["input_text"]
     generated_text = text_gen.generate_text(input_text)
