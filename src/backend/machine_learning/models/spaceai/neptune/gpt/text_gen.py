@@ -1,17 +1,9 @@
-import os
-
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 # Loading the GPT-Neo model and tokenizer
 model_name = "mistralai/Mistral-7B-Instruct-v0.2"
-cache_dir = "D:/huggingface_cache"
-
-os.environ["HF_HOME"] = "D:/huggingface"
-
-tokenizer = AutoTokenizer.from_pretrained(model_name, cache_dir=cache_dir)
-model = AutoModelForCausalLM.from_pretrained(
-    model_name, cache_dir=cache_dir, force_download=True
-)
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModelForCausalLM.from_pretrained(model_name)
 
 
 def generate_text(prompt):
