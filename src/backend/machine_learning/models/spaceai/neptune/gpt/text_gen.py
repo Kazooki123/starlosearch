@@ -1,22 +1,22 @@
-from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
+import os
 
-# Load the GPT-2 model and tokenizer
-tokenizer = AutoTokenizer.from_pretrained("gpt2")
-model = AutoModelForCausalLM.from_pretrained("gpt2")
+from transformers import AutoTokenizer, AutoModelForCausalLM
 
-# Load the pipelines for question answering and sentiment analysis
-qa_pipeline = pipeline(
-    "question-answering", model="distilbert-base-cased-distilled-squad"
-)
-sentiment_pipeline = pipeline(
-    "text-classification", model="distilbert-base-uncased-finetuned-sst-2-english"
+# Loading the GPT-Neo model and tokenizer
+model_name = "mistralai/Mistral-7B-Instruct-v0.2"
+cache_dir = "D:/huggingface_cache"
+
+os.environ["HF_HOME"] = "D:/huggingface"
+
+tokenizer = AutoTokenizer.from_pretrained(model_name, cache_dir=cache_dir)
+model = AutoModelForCausalLM.from_pretrained(
+    model_name, cache_dir=cache_dir, force_download=True
 )
 
 
 def generate_text(prompt):
     input_ids = tokenizer.encode(prompt, return_tensors="pt")
 
-    # Generate text with repetition penalty to reduce repetitive sentences
     output = model.generate(
         input_ids,
         max_length=1024,
@@ -28,14 +28,7 @@ def generate_text(prompt):
     )
     generated_text = tokenizer.decode(output[0], skip_special_tokens=True)
 
-    # Check if the prompt is a question and answer it
     if "?" in prompt:
-        question = prompt.strip("?")
-        answer = qa_pipeline(question=question, context=generated_text)["answer"]
-        generated_text += f"\nAnswer: {answer}"
-
-    # Analyze the sentiment of the generated text
-    sentiment = sentiment_pipeline(generated_text)[0]["label"]
-    generated_text += f"\nSentiment: {sentiment}"
+        pass
 
     return generated_text
