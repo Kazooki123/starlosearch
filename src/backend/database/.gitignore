@@ -1,3 +1,5 @@
 .env
 testing/
 sample_data/
+
+.db
