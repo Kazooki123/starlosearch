@@ -71,8 +71,6 @@ Discord: starloexoliz
 
 Emails: <mgamerdinge146@gmail.com>, <markanthonygelito@gmail.com>
 
-Twitter: @Mr_Unknown157
-
 # Acknowledgments
 
 Special thanks to StarloExoliz, The developer of this project and all the contributers!!
